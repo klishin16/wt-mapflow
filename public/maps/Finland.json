@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "map": {
+    "_id": "68f7d6184d6d3997b69249b1",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/maps%2F1761072662238-Finland.png?alt=media&token=60c9017e-e68d-4dad-a469-f0628a5e946c",
+    "mapName": "Finland",
+    "pins": [
+      {
+        "tags": [],
+        "x": 452.5483399593904,
+        "y": 238.1453636974843,
+        "description": "you have to clear out some tree that blocks the view but after that u have a clear view of the enemy road that leads to their spawn",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762429181665-Screenshot%202025-11-06%20133829.png?alt=media&token=b38120f3-f478-4098-9aa9-1cf42aad6015",
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "status": "approved",
+        "_id": "690c88ff1a83913345b46e40",
+        "createdAt": "2025-11-06T11:39:43.464Z",
+        "updatedAt": "2025-12-27T12:46:31.265Z",
+        "approvedAt": "2025-11-06T11:40:57.601Z",
+        "approvedBy": "ahmadgggahmadggg55@gmail.com"
+      },
+      {
+        "tags": [],
+        "x": 442.64884502277874,
+        "y": 788.4322046761014,
+        "description": "From the position of the tank right next to me, you can see almost all of the B-point. Using a white winter camo would help with stopping enemies from spotting you.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1766836524838-Schermafbeelding%202025-12-27%20124501.png?alt=media&token=58933520-06ff-4cf2-984f-8123fdd9197f",
+        "author": "thommieboooy1@gmail.com",
+        "status": "approved",
+        "_id": "694fc92e5d42e0ac25dbf00f",
+        "createdAt": "2025-12-27T11:55:26.910Z",
+        "updatedAt": "2025-12-27T12:46:31.265Z",
+        "approvedAt": "2025-12-27T12:46:31.259Z",
+        "approvedBy": "ahmadgggahmadggg55@gmail.com"
+      }
+    ],
+    "createdAt": "2025-10-21T18:51:04.755Z",
+    "updatedAt": "2025-12-27T12:46:31.266Z",
+    "__v": 2,
+    "spawnPoints": [
+      {
+        "x": 554,
+        "y": 834.9459623557984,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbc6181f8d56a22427cda",
+        "createdAt": "2025-12-27T11:00:49.773Z"
+      },
+      {
+        "x": 565,
+        "y": 199.56041287188827,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbc6681f8d56a22427cdf",
+        "createdAt": "2025-12-27T11:00:54.259Z"
+      }
+    ],
+    "routes": []
+  }
+}

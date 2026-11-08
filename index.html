@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <title>wt-rat</title>
+</head>
+<body>
+    <header class="app-header">
+        <nav id="map-toolbar" aria-label="Режим карты">
+            <span id="connection-status" role="status">Подключение к игре…</span>
+            <span id="map-status" role="status"></span>
+        </nav>
+        <details id="map-settings" class="settings-menu">
+            <summary>Настройки</summary>
+            <aside class="settings-panel" aria-label="Настройки карты">
+                <h2>Настройки карты</h2>
+                <section class="settings-group" aria-labelledby="display-settings-title">
+                    <h3 id="display-settings-title">Отображение</h3>
+                    <label class="marker-size-control">
+                        Метки
+                        <input id="marker-size" type="range" min="20" max="48" step="2" value="32" aria-label="Размер значков техники"/>
+                        <output id="marker-size-value" for="marker-size">32 px</output>
+                    </label>
+                    <label class="spawn-guidance-toggle" title="Линии от самолёта игрока к вражеским танковым спавнам">
+                        <input id="enemy-spawn-guidance" type="checkbox" role="switch" checked/>
+                        К танковым спавнам
+                    </label>
+                </section>
+                <section class="settings-group" aria-labelledby="position-settings-title">
+                    <h3 id="position-settings-title">Позиции и импорт</h3>
+                    <section id="position-controls" aria-label="Тактические позиции">
+                        <button id="position-new" type="button" disabled>+ Позиция</button>
+                        <select id="position-list" aria-label="Позиции на карте" disabled><option value="">Позиции на карте</option></select>
+                        <select id="spawn-filter" aria-label="Фильтр позиций по спавну"><option value="">Все стороны</option></select>
+                        <button id="positions-export" type="button">Экспорт</button>
+                        <button id="positions-import" type="button" title="Объединить с файлом; совпадающие записи будут заменены">Импорт</button>
+                        <label class="spawn-guidance-toggle"><input id="show-ratline" type="checkbox" role="switch" checked/> Показывать точки Ratline</label>
+                        <button id="ratline-import" type="button">Импорт JSON Ratline</button>
+                        <input id="positions-import-file" type="file" accept="application/json,.json" hidden/>
+                        <p id="positions-status" class="help"></p>
+                    </section>
+                </section>
+                <details id="map-recognition-panel" class="map-recognition-panel">
+                    <summary>Определение карты</summary>
+                    <p id="map-recognition-status" role="status"></p>
+                    <div class="map-recognition-controls">
+                        <label>Карта <input id="map-name-choice" list="map-name-options" maxlength="128" placeholder="Название игровой карты, например Tunisia" disabled/></label>
+                        <datalist id="map-name-options"></datalist>
+                        <button id="map-name-apply" type="button" disabled>Применить и запомнить</button>
+                        <button id="map-name-auto" type="button" disabled>Автоопределение</button>
+                    </div>
+                    <p class="help">Можно ввести название карты, которой нет в списке. Выбор сохраняется для этого хеша изображения. Для импорта JSON Ratline совпадение названий не требуется.</p>
+                    <p id="map-recognition-message" class="help" role="status"></p>
+                    <details><summary>Диагностика хешей</summary><pre id="map-recognition-diagnostics"></pre></details>
+                </details>
+                <nav class="settings-group settings-links" aria-label="Режим приложения">
+                    <h3>Режим приложения</h3>
+                    <a href="?demo=1">Демо без игры</a>
+                    <a href="?demo=1&amp;vehicle=aircraft">Демо авиации</a>
+                    <a href="/">К игре</a>
+                </nav>
+            </aside>
+        </details>
+    </header>
+    <section id="map-controls" aria-label="Управление картой">
+        <div class="zoom-controls" role="group" aria-label="Масштаб">
+            <button id="zoom-out" type="button" aria-label="Отдалить карту" title="Отдалить" disabled>−</button>
+            <output id="zoom-level" aria-label="Текущий масштаб">1.0×</output>
+            <button id="zoom-in" type="button" aria-label="Приблизить карту" title="Приблизить" disabled>+</button>
+        </div>
+        <button id="follow-player" type="button" aria-pressed="true" disabled>Следовать</button>
+        <button id="map-overview" type="button" disabled>Вся карта</button>
+        <span id="camera-mode" role="status">Ожидание игрока</span>
+        <span id="spawn-guidance-info" class="help" hidden></span>
+    </section>
+    <section id="map-pick-bar" hidden aria-label="Выбор точки на карте">
+        <span id="map-pick-instruction" role="status"></span>
+        <span id="map-route-count" class="help" hidden></span>
+        <button id="map-route-undo" type="button" hidden>Убрать последнюю точку</button>
+        <button id="map-route-done" type="button" hidden>Готово</button>
+        <button id="map-pick-cancel" type="button">Вернуться к форме</button>
+    </section>
+    <main id="map-viewport" aria-label="Интерактивная карта">
+        <div id="map-root">
+            <canvas id="map-canvas" aria-label="Карта боя">Для отображения карты необходим Canvas.</canvas>
+        </div>
+        <aside id="position-card" hidden aria-labelledby="card-title">
+            <div class="card-heading">
+                <div><p id="card-source" class="help"></p><h2 id="card-title"></h2></div>
+                <button id="card-close" type="button" aria-label="Закрыть описание позиции">×</button>
+            </div>
+            <p id="card-distance" class="help"></p>
+            <p id="card-description"></p>
+            <p id="card-details" class="help"></p>
+            <div id="card-screenshots" class="screenshot-gallery"></div>
+            <div class="card-actions">
+                <button id="card-edit" type="button">Редактировать</button>
+                <button id="card-delete" type="button">Удалить</button>
+            </div>
+        </aside>
+    </main>
+    <div id="position-notice" hidden role="status"></div>
+    <dialog id="position-dialog" class="position-dialog" aria-labelledby="position-dialog-title">
+        <form id="position-form">
+            <h2 id="position-dialog-title">Новая позиция</h2>
+            <p class="help">Изменения сохраняются в этом браузере. Экспорт позволяет перенести позиции вместе со скриншотами.</p>
+            <fieldset id="editor-fields">
+                <label>Название<input id="position-name" required maxlength="120" autocomplete="off"/></label>
+                <label>Тактика на позиции<textarea id="position-description" rows="5" maxlength="10000" placeholder="Как занять позицию, какие направления контролировать, где укрыться"></textarea></label>
+                <div class="editor-map-row">
+                    <span>Место: <output id="position-coordinates"></output></span>
+                    <button id="position-pick-point" type="button">Изменить на карте</button>
+                </div>
+                <div class="editor-map-row">
+                    <span>Направление: <output id="position-aim-value">Не задано</output></span>
+                    <button id="position-pick-aim" type="button">Указать на карте</button>
+                    <button id="position-clear-aim" type="button">Убрать</button>
+                </div>
+                <div class="editor-map-row">
+                    <span>Путь подъезда: <output id="position-route-value">Не задан</output></span>
+                    <button id="position-pick-route" type="button">Проложить / изменить</button>
+                    <button id="position-clear-route" type="button">Убрать путь</button>
+                    <p class="help">Отметь начало и повороты вручную. Последний участок всегда ведёт к позиции.</p>
+                </div>
+                <div class="editor-options">
+                    <label>Сторона / спавн<select id="position-spawn"><option value="">Для любой стороны</option></select></label>
+                    <label>Радиус подсказки, м<input id="position-radius" type="number" min="20" max="2000" step="10" value="100" required/></label>
+                </div>
+                <div id="screenshot-drop">
+                    <label>Скриншоты<input id="position-files" type="file" accept="image/png,image/jpeg,image/webp" multiple/></label>
+                    <p class="help">До 6 изображений по 8 МБ. Можно перетащить файлы сюда или вставить скриншот из буфера.</p>
+                    <div id="editor-screenshots" class="screenshot-gallery"></div>
+                </div>
+            </fieldset>
+            <p id="editor-error" role="alert"></p>
+            <div class="editor-actions">
+                <button id="position-cancel" type="button">Отмена</button>
+                <button id="position-save" type="submit">Сохранить</button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

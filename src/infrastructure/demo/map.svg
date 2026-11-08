@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#9aab7b"/>
+  <path d="M0 130Q250 250 170 480T100 1024H0Z M640 0Q730 220 1024 180V0Z M750 620Q570 800 790 1024H1024V700Z" fill="#72875c"/>
+  <path d="M-30 860Q330 750 430 400T1080 230" fill="none" stroke="#698f9c" stroke-width="65"/>
+  <path d="M-30 860Q330 750 430 400T1080 230" fill="none" stroke="#8db0bb" stroke-width="45"/>
+  <path d="M130 1050L370 720 430 520 740 320 890 -20 M-20 490L260 560 430 520 790 560 1050 460" fill="none" stroke="#6c695c" stroke-width="27"/>
+  <path d="M130 1050L370 720 430 520 740 320 890 -20 M-20 490L260 560 430 520 790 560 1050 460" fill="none" stroke="#c8bea2" stroke-width="19"/>
+  <g fill="#b0a38b" stroke="#776e60" stroke-width="3">
+    <path d="M340 420h50v55h-50z M465 420h80v50h-80z M480 555h60v80h-60z M575 460h55v45h-55z M300 580h60v40h-60z M600 570h75v60h-75z"/>
+    <path d="M710 200h55v60h-55z M800 270h70v45h-70z M250 740h60v65h-60z M390 770h60v40h-60z"/>
+  </g>
+  <g fill="#556c48">
+    <circle cx="150" cy="180" r="32"/><circle cx="180" cy="225" r="29"/>
+    <circle cx="95" cy="260" r="40"/><circle cx="890" cy="800" r="45"/>
+    <circle cx="820" cy="880" r="30"/><circle cx="760" cy="810" r="35"/>
+    <circle cx="650" cy="130" r="38"/><circle cx="580" cy="100" r="30"/>
+  </g>
+  <text x="25" y="995" font-family="sans-serif" font-size="18" fill="#35422e">DEMO · учебная карта, не игровая локация</text>
+</svg>

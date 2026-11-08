@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "map": {
+    "_id": "68f7d66e4d6d3997b69249bb",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/maps%2F1761072749126-IberianCastle.png?alt=media&token=c73ca02d-7828-4610-93b0-ca986a28663f",
+    "mapName": "IberianCastle",
+    "pins": [
+      {
+        "tags": [],
+        "x": 0.5,
+        "y": 0.5,
+        "description": "you have to climb ontop of the rocks a medium tank is easier",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762011544398-Screenshot%202025-11-01%20173821.png?alt=media&token=2731ba30-3ac2-415c-8a75-5a9a174e5b55",
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "6906299a327e22cf33f7cff1",
+        "createdAt": "2025-11-01T15:39:06.494Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T12:56:26.782Z",
+        "color": "#AA4D00",
+        "icon": "defending_point"
+      }
+    ],
+    "createdAt": "2025-10-21T18:52:30.635Z",
+    "updatedAt": "2025-12-27T11:07:02.861Z",
+    "__v": 4,
+    "spawnPoints": [
+      {
+        "x": 405.1721856198917,
+        "y": 621.8360145288702,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbdc681f8d56a22427d74",
+        "createdAt": "2025-12-27T11:06:46.930Z"
+      },
+      {
+        "x": 291.32799384885755,
+        "y": 492.40670845070025,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbdcb81f8d56a22427d78",
+        "createdAt": "2025-12-27T11:06:51.290Z"
+      },
+      {
+        "x": 624,
+        "y": 392.67759562841536,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbdcf81f8d56a22427d7d",
+        "createdAt": "2025-12-27T11:06:55.550Z"
+      },
+      {
+        "x": 504.8742417671949,
+        "y": 298.97264676070193,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fbdd681f8d56a22427d83",
+        "createdAt": "2025-12-27T11:07:02.861Z"
+      }
+    ],
+    "routes": []
+  }
+}

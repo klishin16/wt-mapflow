@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "map": {
+    "_id": "68f7d3f74d6d3997b692498f",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/maps%2F1761072117628-AdvanceToTheRhine.png?alt=media&token=61f778cb-d863-41d1-84d8-99983e8df029",
+    "mapName": "AdvanceToTheRhine",
+    "pins": [
+      {
+        "tags": [],
+        "x": 576,
+        "y": 117.89495591215291,
+        "description": "Rubble Pile Peek (SL4) - Not Common\nYou can climb the rubble pile out of the bottom side spawn and peek over the entirety of the park and other parts of the map. You can use most tanks to get up, although you may need to climb side to side.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762022827016-20251101134552_1.jpg?alt=media&token=c1c29b84-c95d-49e8-908e-d154ada8dbd2",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "690655af327e22cf33f7d155",
+        "createdAt": "2025-11-01T18:47:11.668Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 119,
+        "y": 508.9449221388539,
+        "description": "Out of map flank (SL5.1) - Somewhat common\nFrom the top spawn, you can rush across and climb this rubble pile to exit the map boundaries. Then follow straight and slight left into the pin below this.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023058382-20251101134932_1.jpg?alt=media&token=55e4c1a9-4da9-4d2b-bd73-7f6016caf28f",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "69065697327e22cf33f7d16b",
+        "createdAt": "2025-11-01T18:51:03.173Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 144,
+        "y": 419.9335487522135,
+        "description": "Out of map flank (SL5.2) - Somewhat common\nThis is where you re-enter the map boundaries. You will need to be quick about this. The enemies might hear you or see you, and you may get stuck on the pile. If pulled off successfully, you get 2-3 free kills unless the enemy is very blind.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023157064-20251101134903_1.jpg?alt=media&token=7dcd6576-0ca2-421b-b01f-db8dafedaf23",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "690656f9327e22cf33f7d18f",
+        "createdAt": "2025-11-01T18:52:41.117Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 243.95183950935888,
+        "y": 388.53032677127663,
+        "description": "Rubble Peek (SL6) - Uncommon, yet easy to see\nThis spot relies on you being able to kill the enemy before they realize you are up there. You need a runup and this spot is reliable for about 1:30 before the enemy you first killed pushed back and peeks you.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023387883-20251101135624_1.jpg?alt=media&token=28d59bce-466f-4241-85ea-602bb1960ae3",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "690657e0327e22cf33f7d195",
+        "createdAt": "2025-11-01T18:56:32.486Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 470.2260094890541,
+        "y": 443.687050291116,
+        "description": "Rubble Peek Through Building (SL7) - Never seen\nThis peek requires you to drive up this rubble pile quickly and reach the top. Starting from the monument side is almost necessary. This allows you to peek onto the a cap and parts of the park. However, you are exposed behind you.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023616840-20251101135814_1.jpg?alt=media&token=84c5bdcf-a71e-4de1-b75f-083142b2abe3",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "690658c5327e22cf33f7d1a7",
+        "createdAt": "2025-11-01T19:00:21.519Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 467.0440289737146,
+        "y": 452.87907699940314,
+        "description": "Rubble peek addition (SL7.1) - Never seen\nThis is an addition to the other peek on this pile. You can back up a bit towards the monument and peek into almost every way to get out of the top side spawn. This is a risky peek but can pay off if you are quick and hit your shots.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023745149-20251101140111_1.jpg?alt=media&token=ea23b9bd-e54c-4a92-9491-24d6d2ea4134",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "69065945327e22cf33f7d1af",
+        "createdAt": "2025-11-01T19:02:29.397Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 569.9280656363572,
+        "y": 423.53586245406655,
+        "description": "Shoot through Building (SL8) - Uncommon\nYou are able to shoot through the doors and windows of the brick building. This is useful against somebody sitting on the a cap. They might try to shoot you so try to get your shot off quick",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023839130-20251101140253_1.jpg?alt=media&token=69b035d6-19c7-4bf5-9275-2e154879d3bf",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "690659a3327e22cf33f7d1b8",
+        "createdAt": "2025-11-01T19:04:03.515Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      },
+      {
+        "tags": [],
+        "x": 412,
+        "y": 729.9731639191632,
+        "description": "Rubble Peek to monument (SL9) - Never Seen\nYou can climb the rubble pile to get a view through the window onto the east side of the monument. This is a special use case when somebody is camping or when you would like to camp.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/ratline-e3d88.firebasestorage.app/o/screenshots%2F1762023972009-20251101140519_1.jpg?alt=media&token=7ac8281a-22b3-4f89-b0b7-4690f338be07",
+        "author": "hotbowl1080@gmail.com",
+        "_id": "69065a28327e22cf33f7d1c2",
+        "createdAt": "2025-11-01T19:06:16.663Z",
+        "status": "approved",
+        "updatedAt": "2025-12-27T09:51:02.148Z"
+      }
+    ],
+    "createdAt": "2025-10-21T18:41:59.929Z",
+    "updatedAt": "2025-12-27T09:51:02.148Z",
+    "__v": 9,
+    "spawnPoints": [
+      {
+        "x": 170.41273426595794,
+        "y": 795.1151716391464,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fabe081f8d56a22427adb",
+        "createdAt": "2025-12-27T09:50:24.065Z"
+      },
+      {
+        "x": 641,
+        "y": 924.9398907103825,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fabf081f8d56a22427ae7",
+        "createdAt": "2025-12-27T09:50:40.275Z"
+      },
+      {
+        "x": 154,
+        "y": 229.57862780813605,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fabf681f8d56a22427af4",
+        "createdAt": "2025-12-27T09:50:46.314Z"
+      },
+      {
+        "x": 513,
+        "y": 71.54341226472377,
+        "author": "ahmadgggahmadggg55@gmail.com",
+        "_id": "694fac0681f8d56a22427b02",
+        "createdAt": "2025-12-27T09:51:02.147Z"
+      }
+    ],
+    "routes": []
+  }
+}
