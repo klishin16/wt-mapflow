@@ -6,10 +6,10 @@ import type {Point} from '../domain/geometry.ts';
 import type {PositionDraft, TacticalPosition} from '../domain/position.ts';
 import {appliesToSpawn, approachPathLength, mapDistanceMeters} from '../domain/position.ts';
 import {isSameMap, mapVariantId} from '../domain/map-identity.ts';
-import {element, button} from './dom.ts';
+import {button, element} from './dom.ts';
 import {MapView} from './map-view.ts';
-import {PositionEditor} from './position-editor.ts';
 import type {PickMode, SpawnChoice} from './position-editor.ts';
+import {PositionEditor} from './position-editor.ts';
 import {RatlineImportDialog} from './ratline-import-dialog.ts';
 import {ScreenshotGallery} from './screenshot-gallery.ts';
 
@@ -194,9 +194,8 @@ export class PositionWorkspace {
             else if (!nearby && this.selected) this.closeCard(false);
         }
         if (this.selected) {
-            const distance = player?.kind === 'point' && this.state.info?.geometry ?
+            element('card-distance', HTMLElement).textContent = player?.kind === 'point' && this.state.info?.geometry ?
                 `${Math.round(mapDistanceMeters(player.position, this.selected.point, this.state.info.geometry))} м от игрока` : '';
-            element('card-distance', HTMLElement).textContent = distance;
         }
         this.overlay();
     }
@@ -334,7 +333,7 @@ export class PositionWorkspace {
             const url = URL.createObjectURL(file);
             const link = document.createElement('a');
             link.href = url;
-            link.download = `wt-rat-positions-${new Date().toISOString().slice(0, 10)}.json`;
+            link.download = `wt-mapflow-positions-${new Date().toISOString().slice(0, 10)}.json`;
             document.body.append(link);
             link.click();
             link.remove();

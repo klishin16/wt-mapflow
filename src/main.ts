@@ -26,6 +26,7 @@ import {BrowserMapSettings} from './infrastructure/browser-map-settings.ts';
 const demo = new URLSearchParams(window.location.search).get('demo') === '1';
 const aircraftDemo = demo && new URLSearchParams(window.location.search).get('vehicle') === 'aircraft';
 const settings = new BrowserMapSettings();
+const lifecycle = new AbortController();
 const settingsMenu = new SettingsMenu();
 let workspace: PositionWorkspace;
 let recognitionPanel: MapRecognitionPanel;
@@ -33,11 +34,20 @@ const recognizer = new BrowserMapRecognizer();
 const recognitionReports = new WeakMap<HTMLImageElement, MapRecognition>();
 let lastState: MapViewState<HTMLImageElement> | null = null;
 let showRatline = settings.showRatline();
+let showAirfieldAirDefence = settings.showAirfieldAirDefence();
+const airfieldAirDefenceToggle = element('show-airfield-air-defence', HTMLInputElement);
+airfieldAirDefenceToggle.checked = showAirfieldAirDefence;
 const ratlineToggle = element('show-ratline', HTMLInputElement);
 ratlineToggle.checked = showRatline;
 function render(state: MapViewState<HTMLImageElement>): void {
     lastState = state;
-    const visible = showRatline ? state : {...state, positions: state.positions.filter(position => position.source?.provider !== 'ratline')};
+    const visible = {
+        ...state,
+        positions: showRatline ? state.positions : state.positions.filter(position => position.source?.provider !== 'ratline'),
+        // Airdefence is the static map symbol; mobile SPAA/SAM keep their vehicle markers.
+        objects: showAirfieldAirDefence ? state.objects : state.objects.filter(object =>
+            object.kind !== 'point' || object.icon !== 'Airdefence' || object.vehicleClass === 'anti-air')
+    };
     view.setState(visible);
     workspace.setState(visible);
     recognitionPanel.setState(state, state.image ? recognitionReports.get(state.image) ?? null : null);
@@ -46,7 +56,12 @@ ratlineToggle.addEventListener('change', () => {
     showRatline = ratlineToggle.checked;
     settings.setShowRatline(showRatline);
     if (lastState) render(lastState);
-});
+}, {signal: lifecycle.signal});
+airfieldAirDefenceToggle.addEventListener('change', () => {
+    showAirfieldAirDefence = airfieldAirDefenceToggle.checked;
+    settings.setShowAirfieldAirDefence(showAirfieldAirDefence);
+    if (lastState) render(lastState);
+}, {signal: lifecycle.signal});
 const view = new MapView({
     viewport: element('map-viewport', HTMLElement),
     root: element('map-root', HTMLElement),
@@ -115,7 +130,6 @@ recognitionPanel = new MapRecognitionPanel({
 view.start();
 controller.start();
 
-const lifecycle = new AbortController();
 window.addEventListener('pagehide', () => {
     controller.stop();
     view.stop();

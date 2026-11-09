@@ -22,7 +22,7 @@ export class JsonPositionBackup implements PositionBackupCodec {
         if (file.size > 100 * 1024 * 1024) throw new Error('Файл импорта должен быть не больше 100 МБ');
         const data: unknown = JSON.parse(await file.text());
         if (!isRecord(data) || data.format !== 'wt-rat-positions' || data.version !== 1 || !Array.isArray(data.changes) || !Array.isArray(data.attachments)) {
-            throw new Error('Нужен файл экспорта wt-rat версии 1');
+            throw new Error('Нужен файл экспорта WT MapFlow версии 1');
         }
         const changes = data.changes.map(decodePositionChange);
         const attachments: PositionAttachment[] = [];

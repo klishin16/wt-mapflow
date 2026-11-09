@@ -1,6 +1,15 @@
 const guidanceKey = 'wt-rat.enemy-tank-spawn-guidance';
 
 export class BrowserMapSettings {
+    showAirfieldAirDefence(): boolean {
+        try { return localStorage.getItem('wt-rat.show-airfield-air-defence') === 'true'; }
+        catch { return false; }
+    }
+
+    setShowAirfieldAirDefence(enabled: boolean): void {
+        try { localStorage.setItem('wt-rat.show-airfield-air-defence', String(enabled)); } catch { /* Session choice still applies. */ }
+    }
+
     showRatline(): boolean {
         try { return localStorage.getItem('wt-rat.show-ratline') !== 'false'; }
         catch { return true; }
