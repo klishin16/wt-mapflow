@@ -26,3 +26,6 @@ dist-ssr
 ТЗ.md
 AGENTS.md
 TODO_features.md
+
+# Local map datasets
+/public/maps/
