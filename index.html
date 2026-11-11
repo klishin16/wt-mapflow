@@ -11,40 +11,60 @@
         <nav id="map-toolbar" aria-label="Режим карты">
             <span id="connection-status" role="status">Подключение к игре…</span>
             <span id="map-status" role="status"></span>
+            <span id="battle-mode" role="status">Режим не определён</span>
+            <span id="player-side" class="player-side" role="status" title="Сторона дружественных танковых спавнов">Сторона не определена</span>
         </nav>
         <details id="map-settings" class="settings-menu">
             <summary>Настройки</summary>
             <aside class="settings-panel" aria-label="Настройки карты">
                 <h2>Настройки карты</h2>
-                <section class="settings-group" aria-labelledby="display-settings-title">
-                    <h3 id="display-settings-title">Отображение</h3>
+                <section class="settings-group" aria-labelledby="general-settings-title">
+                    <h3 id="general-settings-title">Общие</h3>
                     <label class="marker-size-control">
-                        Метки
+                        Размер значков
                         <input id="marker-size" type="range" min="20" max="48" step="2" value="32" aria-label="Размер значков техники"/>
                         <output id="marker-size-value" for="marker-size">32 px</output>
                     </label>
-                    <label class="spawn-guidance-toggle" title="Линии от самолёта игрока к вражеским танковым спавнам">
-                        <input id="enemy-spawn-guidance" type="checkbox" role="switch" checked/>
-                        К танковым спавнам
-                    </label>
-                    <label class="spawn-guidance-toggle">
-                        <input id="show-airfield-air-defence" type="checkbox" role="switch"/>
-                        Показывать ПВО аэродромов
+                    <label class="switch-control">
+                        <input id="show-ratline" type="checkbox" role="switch" checked/>
+                        Показывать точки Ratline
                     </label>
                 </section>
-                <section class="settings-group" aria-labelledby="position-settings-title">
-                    <h3 id="position-settings-title">Позиции и импорт</h3>
-                    <section id="position-controls" aria-label="Тактические позиции">
+                <section class="settings-group" aria-labelledby="ground-settings-title">
+                    <h3 id="ground-settings-title">Танковая карта</h3>
+                    <label class="switch-control" title="По привязке к спавну или началу маршрута. Общие метки остаются видимыми.">
+                        <input id="only-own-spawn-positions" type="checkbox" role="switch" checked/>
+                        Показывать точки только своего респа
+                    </label>
+                    <label class="switch-control" title="Все пути видны до первого появления игрока в текущем бою">
+                        <input id="show-preparation-routes" type="checkbox" role="switch" checked/>
+                        Показывать все пути до начала боя
+                    </label>
+                    <section id="position-controls" aria-label="Позиции и импорт">
                         <button id="position-new" type="button" disabled>+ Позиция</button>
                         <select id="position-list" aria-label="Позиции на карте" disabled><option value="">Позиции на карте</option></select>
                         <select id="spawn-filter" aria-label="Фильтр позиций по спавну"><option value="">Все стороны</option></select>
                         <button id="positions-export" type="button">Экспорт</button>
                         <button id="positions-import" type="button" title="Объединить с файлом; совпадающие записи будут заменены">Импорт</button>
-                        <label class="spawn-guidance-toggle"><input id="show-ratline" type="checkbox" role="switch" checked/> Показывать точки Ratline</label>
                         <button id="ratline-import" type="button">Импорт JSON Ratline</button>
                         <input id="positions-import-file" type="file" accept="application/json,.json" hidden/>
                         <p id="positions-status" class="help"></p>
                     </section>
+                </section>
+                <section class="settings-group" aria-labelledby="air-settings-title">
+                    <h3 id="air-settings-title">Авиационная карта</h3>
+                    <label class="switch-control" title="Плавный масштаб по расстоянию до ближайшего вражеского танкового спавна. После ручного масштаба возобновляется кнопкой «Следовать».">
+                        <input id="adaptive-aircraft-zoom" type="checkbox" role="switch" checked/>
+                        Автоприближение к танковому бою
+                    </label>
+                    <label class="switch-control" title="Линии от самолёта игрока к вражеским танковым спавнам">
+                        <input id="enemy-spawn-guidance" type="checkbox" role="switch" checked/>
+                        К танковым спавнам
+                    </label>
+                    <label class="switch-control">
+                        <input id="show-airfield-air-defence" type="checkbox" role="switch"/>
+                        Показывать ПВО аэродромов
+                    </label>
                 </section>
                 <details id="map-recognition-panel" class="map-recognition-panel">
                     <summary>Определение карты</summary>
@@ -64,6 +84,7 @@
                     <a href="?demo=1">Демо без игры</a>
                     <a href="?demo=1&amp;vehicle=aircraft">Демо авиации</a>
                     <a href="/">К игре</a>
+                    <a href="/admin.html" target="_blank" rel="noopener">Админ-панель</a>
                 </nav>
             </aside>
         </details>

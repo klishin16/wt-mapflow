@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <title>Админ-панель — WT MapFlow</title>
+</head>
+<body>
+    <main class="admin-shell">
+        <header class="admin-header">
+            <div><p class="eyebrow">WT MapFlow / Админ-панель</p><h1>Каталог карт</h1><p class="muted">Карты, варианты сражений и сохранённые хеши.</p></div>
+            <a class="button secondary" href="/">Вернуться к карте</a>
+        </header>
+        <section class="stats" aria-label="Сводка каталога">
+            <div><span class="muted">Карт в каталоге</span><strong id="admin-map-count">—</strong></div>
+            <div><span class="muted">Вариантов сражений</span><strong id="admin-variant-count">—</strong></div>
+            <div><span class="muted">Сохранённых хешей</span><strong id="admin-hash-count">—</strong></div>
+        </section>
+        <section class="catalog-panel" aria-label="Список карт">
+            <form id="admin-create-map" class="edit-row">
+                <label>Новая карта<input id="admin-new-map-name" required maxlength="128" placeholder="Название карты" autocomplete="off"/></label>
+                <button type="submit">Добавить карту</button>
+            </form>
+            <p id="admin-message" role="status" hidden></p>
+            <div class="filters">
+                <label class="search">Поиск<input id="admin-search" type="search" placeholder="Название, идентификатор, вариант или хеш" autocomplete="off"/></label>
+                <label>Режим сражения<select id="admin-mode"><option value="all">Все режимы</option><option value="domination">Превосходство</option><option value="conquest">Захват</option><option value="battle">Сражение</option></select></label>
+                <label>Сохранённые хеши<select id="admin-hashes"><option value="all">Все карты</option><option value="with">С хешами</option><option value="without">Без хешей</option></select></label>
+            </div>
+            <p id="admin-results" class="muted" role="status"></p>
+            <div class="table-scroll"><table class="maps-table">
+                <thead><tr><th scope="col">Карта</th><th scope="col">Варианты режимов</th><th scope="col">aHash</th></tr></thead>
+                <tbody id="admin-map-list"></tbody>
+            </table></div>
+            <p id="admin-empty" class="empty" hidden>Карты не найдены. Попробуйте изменить поиск или фильтры.</p>
+        </section>
+        <p class="catalog-note muted">Единое хранилище карт этого браузера. Ручное определение карты сохраняет её хеш; изменения отображаются автоматически. Карточка открывается по названию.</p>
+    </main>
+    <dialog id="admin-map-dialog" aria-labelledby="admin-detail-title">
+        <header class="detail-header"><div><p class="eyebrow">Карточка карты</p><h2 id="admin-detail-title"></h2><code id="admin-detail-id"></code></div><button id="admin-detail-close" type="button" aria-label="Закрыть карточку">Закрыть</button></header>
+        <form id="admin-rename-map" class="edit-row">
+            <label>Название<input id="admin-map-name" required maxlength="128" autocomplete="off"/></label>
+            <button type="submit">Переименовать</button>
+        </form>
+        <p id="admin-detail-message" role="status" hidden></p>
+        <div id="admin-detail-body"></div>
+        <footer class="detail-footer">
+            <p class="muted">При переименовании идентификатор и связи с позициями сохраняются. Удаление карты убирает её запись, варианты и хеши; личные позиции остаются в хранилище позиций.</p>
+            <button id="admin-delete-map" type="button" class="danger">Удалить карту</button>
+        </footer>
+    </dialog>
+    <script type="module" src="/src/admin.ts"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ import type {ImageDimensions, Point} from '../../domain/geometry.ts';
 import type {TacticalPosition} from '../../domain/position.ts';
 import {normalizedPoint, normalizePixels} from '../../domain/geometry.ts';
 import {decodePosition} from './position-codec.ts';
-import {maps} from '../maps/catalog.ts';
+import type {MapCatalogRepository} from '../../application/map-catalog.ts';
 import {finiteNumber, isRecord} from '../records.ts';
 import {decodeLegacyMap} from './legacy-import.ts';
 
@@ -94,15 +94,15 @@ function approved(value: unknown): boolean {
     return !isRecord(value) || (value.isPrivate !== true && (value.status === undefined || value.status === 'approved'));
 }
 
-function canonicalMapId(name: string): string {
-    const normalize = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]/g, '');
-    return Object.values(maps).find(map => map && normalize(map.name) === normalize(name))?.name ?? name;
-}
-
 export class RatlineMapImporter implements RatlineImporter {
     private readonly images: MapImageSource<HTMLImageElement>;
 
-    constructor(images: MapImageSource<HTMLImageElement>) { this.images = images; }
+    private readonly catalog: MapCatalogRepository;
+
+    constructor(images: MapImageSource<HTMLImageElement>, catalog: MapCatalogRepository) {
+        this.images = images;
+        this.catalog = catalog;
+    }
 
     async preview(file: Blob, options: RatlineImportOptions): Promise<RatlineImportPreview> {
         if (file.size > 20 * 1024 * 1024) throw new Error('JSON Ratline должен быть не больше 20 МБ');
@@ -123,7 +123,7 @@ export class RatlineMapImporter implements RatlineImporter {
             throw new Error('В pins есть позиция без числовых координат x и y');
         }
         const map = decodeLegacyMap({map: {...raw, pins: rawPins}});
-        const mapId = options.targetMapId || canonicalMapId(raw.mapName.trim());
+        const mapId = options.targetMapId || (this.catalog.find(raw.mapName.trim())?.id ?? raw.mapName.trim());
         let imageUrl: string | undefined;
         if (map.imageUrl) {
             const url = new URL(map.imageUrl);

@@ -12,6 +12,10 @@ export interface MapGeometry {
     readonly min: Point;
     readonly max: Point;
     readonly gridStep: Point;
+    /** World-space top-left origin of the named grid (grid_zero). */
+    readonly gridOrigin?: Point;
+    /** World-space width and height covered by the named grid (grid_size). */
+    readonly gridSize?: Point;
 }
 
 export function normalizedPoint(x: number, y: number): Point | null {

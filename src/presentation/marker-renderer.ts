@@ -27,6 +27,21 @@ export class MarkerRenderer {
         const angle = object.rotates ? Math.atan2(object.direction.x, -object.direction.y) : 0;
         const emphasis = object.spawnType || gameSymbols[object.icon] ? 1 : vehicleScale;
         this.draw(context, symbol, position, color, angle, emphasis);
+        if (object.icon === 'capture_zone' && object.captureLabel) {
+            context.save();
+            const size = this.size * this.mapScale;
+            context.font = `bold ${Math.max(7, Math.round(size * 0.5))}px Tahoma, sans-serif`;
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.lineJoin = 'round';
+            context.strokeStyle = '#131920';
+            context.lineWidth = Math.max(1, size * 0.06);
+            context.fillStyle = '#fff';
+            const maxWidth = size * 0.55;
+            context.strokeText(object.captureLabel, position.x, position.y, maxWidth);
+            context.fillText(object.captureLabel, position.x, position.y, maxWidth);
+            context.restore();
+        }
     }
 
     drawPlayer(context: CanvasRenderingContext2D, position: Point, angle: number): void {

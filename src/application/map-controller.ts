@@ -1,6 +1,11 @@
+import {determineBattleMode} from '../domain/battle-mode.ts';
+import type {BattleModeDetection} from '../domain/battle-mode.ts';
+import type {BattleModeCatalog} from './ports.ts';
 import type {BattleObject, MapInfo} from '../domain/battle.ts';
 import {isSameMap, mapVariantId} from '../domain/map-identity.ts';
 import {groupTankSpawns} from '../domain/spawn-bases.ts';
+import {determinePlayerSide} from '../domain/player-side.ts';
+import type {PlayerSide} from '../domain/player-side.ts';
 import type {TacticalPosition} from '../domain/position.ts';
 import type {MapImageUrl, TelemetryGateway} from './ports.ts';
 import {LiveBattle} from './live-battle.ts';
@@ -15,6 +20,10 @@ export interface MapViewState<Image> {
     readonly positions: readonly TacticalPosition[];
     readonly connection: 'connecting' | 'connected' | 'waiting' | 'offline';
     readonly mapStatus: MapStatus;
+    readonly battleStarted: boolean;
+    readonly objectsReady: boolean;
+    readonly playerSide: PlayerSide;
+    readonly battleMode: BattleModeDetection;
     readonly connectionError?: string;
     readonly mapError?: string;
     readonly positionWarning?: string;
@@ -25,6 +34,7 @@ interface MapControllerOptions<Image> extends Omit<MapSessionOptions<Image>, 'on
     readonly imageUrl: MapImageUrl;
     readonly onChange: (state: MapViewState<Image>) => void;
     readonly interval?: number;
+    readonly battleModes?: BattleModeCatalog;
 }
 
 export class MapController<Image> {
@@ -32,10 +42,12 @@ export class MapController<Image> {
     private readonly live: LiveBattle;
     private readonly options: MapControllerOptions<Image>;
     private positionRevision = 0;
+    private battleGeneration: number | null = null;
+    private battleStarted = false;
     private opening: Promise<void> = Promise.resolve();
     private state: MapViewState<Image> = {
         info: null, image: null, mapId: null, objects: [], positions: [],
-        connection: 'connecting', mapStatus: 'idle'
+        connection: 'connecting', mapStatus: 'idle', battleStarted: false, objectsReady: false, playerSide: 'unknown', battleMode: {kind: 'unknown', candidates: []}
     };
 
     constructor(options: MapControllerOptions<Image>) {
@@ -51,18 +63,25 @@ export class MapController<Image> {
             gateway: options.gateway,
             interval: options.interval,
             onInfo: info => this.receiveInfo(info),
-            onObjects: objects => this.publish({objects: groupTankSpawns(objects, this.state.info?.geometry ?? null)}),
+            onObjects: objects => {
+                this.battleStarted ||= objects.some(object => object.kind === 'point' && object.icon === 'Player');
+                const grouped = groupTankSpawns(objects, this.state.info?.geometry ?? null);
+                this.publish({
+                    objects: grouped, playerSide: determinePlayerSide(grouped),
+                    battleStarted: this.battleStarted, objectsReady: true
+                });
+            },
             onConnection: (connected, error) => this.publish({
                 connection: connected ? 'connected' : 'offline',
                 connectionError: error?.message,
-                ...(!connected ? {objects: []} : {})
+                ...(!connected ? {objects: [], objectsReady: false, playerSide: 'unknown', battleMode: {kind: 'unknown', candidates: []} as const} : {})
             }),
             onWaiting: () => {
                 this.positionRevision++;
                 this.session.close();
                 this.publish({
                     connection: 'waiting', info: null, image: null, mapId: null,
-                    objects: [], positions: [], mapStatus: 'idle', mapError: undefined
+                    objects: [], positions: [], mapStatus: 'idle', mapError: undefined, objectsReady: false, playerSide: 'unknown', battleMode: {kind: 'unknown', candidates: []} as const
                 });
             }
         });
@@ -93,15 +112,23 @@ export class MapController<Image> {
     }
 
     private publish(changes: Partial<MapViewState<Image>>): void {
-        this.state = {...this.state, ...changes};
+        const next = {...this.state, ...changes};
+        this.state = {
+            ...next,
+            battleMode: determineBattleMode(next.objects, next.info?.geometry ?? null, this.options.battleModes?.variants(next.mapId) ?? [])
+        };
         this.options.onChange(this.state);
     }
 
     private receiveInfo(info: MapInfo): void {
+        if (this.battleGeneration !== info.generation) {
+            this.battleGeneration = info.generation;
+            this.battleStarted = false;
+        }
         const changed = !isSameMap(this.state.info, info);
         if (changed) this.positionRevision++;
-        this.publish({info, ...(changed ? {
-            objects: [], positions: [], image: null, mapId: null, mapStatus: 'loading' as const, mapError: undefined
+        this.publish({info, battleStarted: this.battleStarted, ...(changed ? {
+            objects: [], positions: [], image: null, mapId: null, mapStatus: 'loading' as const, mapError: undefined, objectsReady: false, playerSide: 'unknown', battleMode: {kind: 'unknown', candidates: []} as const
         } : {})});
         if (changed || this.state.mapStatus === 'error') {
             this.opening = this.session.open(info.generation, this.options.imageUrl(info));
@@ -128,7 +155,7 @@ export class MapController<Image> {
         // A resumed page must reopen a session that was cancelled while loading.
         this.state = {
             info: null, image: null, mapId: null, objects: [], positions: [],
-            connection: 'connecting', mapStatus: 'idle'
+            connection: 'connecting', mapStatus: 'idle', battleStarted: this.battleStarted, objectsReady: false, playerSide: 'unknown', battleMode: {kind: 'unknown', candidates: []}
         };
     }
 }

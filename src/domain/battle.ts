@@ -3,6 +3,8 @@ import type {MapGeometry, Point} from './geometry.ts';
 export interface MapInfo {
     readonly generation: number;
     readonly geometry: MapGeometry | null;
+    /** Opaque HUD/map selection supplied by telemetry, independent of the vehicle. */
+    readonly hudType?: number;
 }
 
 export type BattleMap = {readonly kind: 'waiting'} | {readonly kind: 'active'; readonly info: MapInfo};
@@ -26,6 +28,7 @@ export interface PointObject extends ObjectStyle {
     readonly icon: string;
     readonly vehicleClass?: VehicleClass;
     readonly spawnType?: SpawnType;
+    readonly captureLabel?: string;
     readonly position: Point;
     readonly direction: Point;
     readonly rotates: boolean;

@@ -20,11 +20,13 @@ export class DemoGateway implements TelemetryGateway {
 
     async readObjects(signal: AbortSignal): Promise<readonly BattleObject[]> {
         throwIfAborted(signal);
-        const angle = (performance.now() - this.started) / 18000;
+        const elapsed = performance.now() - this.started;
+        const angle = elapsed / 18000;
         const x = 0.5 + Math.cos(angle) * 0.22;
         const y = 0.5 + Math.sin(angle) * 0.22;
+        const player: PointObject = {kind: 'point', icon: 'Player', vehicleClass: this.aircraft ? 'aircraft' : 'ground-vehicle', position: {x, y}, direction: {x: -Math.sin(angle), y: Math.cos(angle)}, color: '#fff', blink: 0, rotates: false};
         return [
-            {kind: 'point', icon: 'Player', vehicleClass: this.aircraft ? 'aircraft' : 'ground-vehicle', position: {x, y}, direction: {x: -Math.sin(angle), y: Math.cos(angle)}, color: '#fff', blink: 0, rotates: false},
+            ...(elapsed < 5000 ? [] : [player]),
             this.marker('LightTank', x - 0.08, y - 0.06, '#3e9bff', 'light-tank'),
             this.marker('MediumTank', x - 0.06, y + 0.04, '#3e9bff', 'medium-tank'),
             this.marker('HeavyTank', x + 0.08, y + 0.03, '#3e9bff', 'heavy-tank'),
@@ -32,8 +34,8 @@ export class DemoGateway implements TelemetryGateway {
             this.marker('SPAA', x, y + 0.1, '#3e9bff', 'anti-air'),
             this.marker('HeavyTank', x + 0.15, y - 0.12, '#ff5147', 'heavy-tank'),
             this.marker('Fighter', x - 0.16, y - 0.13, '#ff5147', 'fighter'),
-            this.marker('capture_zone', 0.42, 0.51, '#83d6ff'),
-            this.marker('capture_zone', 0.72, 0.3, '#ff8b83'),
+            {...this.marker('capture_zone', 0.42, 0.51, '#83d6ff'), captureLabel: 'A'},
+            {...this.marker('capture_zone', 0.72, 0.3, '#ff8b83'), captureLabel: 'B'},
             ...this.spawnBase(0.2, 0.87, '#83d6ff'),
             ...this.spawnBase(0.87, 0.12, '#ff8b83'),
             ...(this.aircraft ? [

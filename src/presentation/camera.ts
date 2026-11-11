@@ -20,6 +20,15 @@ export class Camera {
         this.offset = {x: 0, y: 0};
     }
 
+    frame(point: Point, scale: number): void {
+        this.scale = clamp(scale, 1, 15);
+        this.offset = {
+            x: this.width / 2 - point.x * this.width * this.scale,
+            y: this.height / 2 - point.y * this.height * this.scale
+        };
+        this.clampOffset();
+    }
+
     mapToScreen(point: Point): Point {
         return {x: point.x * this.width * this.scale + this.offset.x, y: point.y * this.height * this.scale + this.offset.y};
     }

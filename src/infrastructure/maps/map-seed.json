@@ -1,0 +1,2378 @@
+[
+  {
+    "id": "38th_Parallel",
+    "name": "38th Parallel",
+    "aliases": [
+      "38th_parallel"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "38th_parallel_battle-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "38th_parallel_conquest-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "38th_parallel_conquest-2_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "38th_parallel_conquest-3_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "38th_parallel_domination-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "2f07030080c1e3df"
+    ]
+  },
+  {
+    "id": "Abandoned_Factory",
+    "name": "Abandoned Factory",
+    "aliases": [
+      "abandoned_factory"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "abandoned_factory_battle-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-1": {
+        "image": "abandoned_factory_conquest-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "abandoned_factory_conquest-2_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-3": {
+        "image": "abandoned_factory_conquest-3_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "domination-1": {
+        "image": "abandoned_factory_domination-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      }
+    },
+    "hashes": [
+      "f3f7fec341e1c000"
+    ]
+  },
+  {
+    "id": "abandoned_town",
+    "name": "Abandoned Town",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "abandoned_town_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "abandoned_town_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "abandoned_town_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "abandoned_town_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "abandoned_town_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "AdvanceToTheRhine",
+    "name": "Advance to the Rhine",
+    "aliases": [
+      "advance_to_the_rhine"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "advance_to_the_rhine_battle-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-1": {
+        "image": "advance_to_the_rhine_conquest-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-2": {
+        "image": "advance_to_the_rhine_conquest-2_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-3": {
+        "image": "advance_to_the_rhine_conquest-3_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-4": {
+        "image": "advance_to_the_rhine_conquest-4_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "domination-1": {
+        "image": "advance_to_the_rhine_domination-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      }
+    },
+    "hashes": [
+      "c3010d1313993767",
+      "0cccfc7e7f7efc18"
+    ]
+  },
+  {
+    "id": "Afghanistan",
+    "name": "Afghanistan",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "000018dc3c3fff7b"
+    ]
+  },
+  {
+    "id": "African_Canyon",
+    "name": "African Canyon",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "fcfcd8e46c0e0080"
+    ]
+  },
+  {
+    "id": "Alaska",
+    "name": "Alaska",
+    "aliases": [
+      "alaska"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "alaska_battle-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "alaska_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "alaska_conquest-2_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "alaska_conquest-3_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "alaska_domination-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "0c3efe78f87c1e0c"
+    ]
+  },
+  {
+    "id": "Alpine_Meadows",
+    "name": "Alpine Meadows",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "3f9f47030363c7c4"
+    ]
+  },
+  {
+    "id": "American_Desert",
+    "name": "American Desert",
+    "aliases": [
+      "american_desert"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "american_desert_battle-1_map.png",
+        "size": 1350,
+        "tile_size": 190
+      },
+      "conquest-1": {
+        "image": "american_desert_conquest-1_map.png",
+        "size": 1350,
+        "tile_size": 190
+      },
+      "conquest-2": {
+        "image": "american_desert_conquest-2_map.png",
+        "size": 1350,
+        "tile_size": 190
+      },
+      "conquest-3": {
+        "image": "american_desert_conquest-3_map.png",
+        "size": 1350,
+        "tile_size": 190
+      },
+      "domination-1": {
+        "image": "american_desert_domination-1_map.png",
+        "size": 1350,
+        "tile_size": 190
+      }
+    },
+    "hashes": [
+      "fcfcfd9910befc0c"
+    ]
+  },
+  {
+    "id": "aral_sea",
+    "name": "Aral Sea",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "aral_sea_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "aral_sea_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "aral_sea_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "aral_sea_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "aral_sea_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "arctic",
+    "name": "Arctic",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "arctic_battle-1_map.png",
+        "size": 2000,
+        "tile_size": 275
+      },
+      "conquest-1": {
+        "image": "arctic_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "arctic_conquest-2_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "arctic_conquest-3_map.png",
+        "size": 1450,
+        "tile_size": 200
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "arctic_pier",
+    "name": "Arctic Pier",
+    "aliases": [],
+    "variants": {
+      "domination-1": {
+        "image": "arctic_pier_domination-1_map.png",
+        "size": 2000,
+        "tile_size": 275
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "arctic_polar_base",
+    "name": "Arctic Polar Base",
+    "aliases": [],
+    "variants": {
+      "domination-1": {
+        "image": "arctic_polar_base_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Ardennes",
+    "name": "Ardennes",
+    "aliases": [
+      "ardennes"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "ardennes_battle-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "ardennes_conquest-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "ardennes_conquest-2_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-3": {
+        "image": "ardennes_conquest-3_map.png",
+        "size": 1225,
+        "tile_size": 170
+      },
+      "domination-1": {
+        "image": "ardennes_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "domination-2": {
+        "image": "ardennes_domination-2_map.png",
+        "size": 2000,
+        "tile_size": 275
+      }
+    },
+    "hashes": [
+      "df60809061ffdbd0"
+    ]
+  },
+  {
+    "id": "ardennes_(winter)",
+    "name": "Ardennes (winter)",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "ardennes_(winter)_battle-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "ardennes_(winter)_conquest-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "ardennes_(winter)_conquest-2_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-3": {
+        "image": "ardennes_(winter)_conquest-3_map.png",
+        "size": 1225,
+        "tile_size": 170
+      },
+      "domination-1": {
+        "image": "ardennes_(winter)_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "domination-2": {
+        "image": "ardennes_(winter)_domination-2_map.png",
+        "size": 2000,
+        "tile_size": 275
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Ash_River",
+    "name": "Ash River",
+    "aliases": [
+      "ash_river"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "ash_river_battle-1_map.png",
+        "size": 1050,
+        "tile_size": 140
+      },
+      "conquest-1": {
+        "image": "ash_river_conquest-1_map.png",
+        "size": 1050,
+        "tile_size": 140
+      },
+      "domination-1": {
+        "image": "ash_river_domination-1_map.png",
+        "size": 1050,
+        "tile_size": 140
+      }
+    },
+    "hashes": [
+      "80c48280c3dfbfff"
+    ]
+  },
+  {
+    "id": "attica",
+    "name": "Attica",
+    "aliases": [],
+    "variants": {
+      "domination-1": {
+        "image": "attica_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Battle_of_Hurtgen_Forest",
+    "name": "Battle of Hurtgen Forest",
+    "aliases": [
+      "battle_of_hurtgen_forest"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "battle_of_hurtgen_forest_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "battle_of_hurtgen_forest_conquest-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-2": {
+        "image": "battle_of_hurtgen_forest_conquest-2_map.png",
+        "size": 1660,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "battle_of_hurtgen_forest_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-4": {
+        "image": "battle_of_hurtgen_forest_conquest-4_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "battle_of_hurtgen_forest_domination-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "domination-2": {
+        "image": "battle_of_hurtgen_forest_domination-2_map.png",
+        "size": 2000,
+        "tile_size": 275
+      }
+    },
+    "hashes": [
+      "181a72fcc5e1c103"
+    ]
+  },
+  {
+    "id": "Berlin",
+    "name": "Berlin",
+    "aliases": [
+      "berlin"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "berlin_battle-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-1": {
+        "image": "berlin_conquest-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-2": {
+        "image": "berlin_conquest-2_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-3": {
+        "image": "berlin_conquest-3_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "domination-1": {
+        "image": "berlin_domination-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      }
+    },
+    "hashes": [
+      "00016000f3ffffb6"
+    ]
+  },
+  {
+    "id": "breslau",
+    "name": "Breslau",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "breslau_battle-1_map.png",
+        "size": 1850,
+        "tile_size": 250
+      },
+      "conquest-1": {
+        "image": "breslau_conquest-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "breslau_conquest-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "breslau_conquest-3_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "breslau_domination-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Britain",
+    "name": "Britain",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "14f4fcfcf8000001"
+    ]
+  },
+  {
+    "id": "campania",
+    "name": "Campania",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "campania_battle-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-1": {
+        "image": "campania_conquest-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "conquest-2": {
+        "image": "campania_conquest-2_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "domination-1": {
+        "image": "campania_domination-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Cargo_Port",
+    "name": "Cargo Port",
+    "aliases": [
+      "cargo_port"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "cargo_port_battle-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-1": {
+        "image": "cargo_port_conquest-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-2": {
+        "image": "cargo_port_conquest-2_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "domination-1": {
+        "image": "cargo_port_domination-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      }
+    },
+    "hashes": [
+      "00307c7c3c3c3c00"
+    ]
+  },
+  {
+    "id": "Carpathians",
+    "name": "Carpathians",
+    "aliases": [
+      "carpathians"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "carpathians_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "carpathians_conquest-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "carpathians_conquest-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "carpathians_conquest-3_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "carpathians_domination-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "003cf9f3f0e2d22c"
+    ]
+  },
+  {
+    "id": "Cliffed_Coast",
+    "name": "Cliffed Coast",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "fffc20c0d0c080e0"
+    ]
+  },
+  {
+    "id": "EasternEurope",
+    "name": "Eastern Europe",
+    "aliases": [
+      "eastern_europe"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "eastern_europe_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "eastern_europe_conquest-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "eastern_europe_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "eastern_europe_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "eastern_europe_domination-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-2": {
+        "image": "eastern_europe_domination-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "fedecccf00e00080",
+      "fe7e73f380070001"
+    ]
+  },
+  {
+    "id": "european_province",
+    "name": "European Province",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "european_province_battle-1_map.png",
+        "size": 3500,
+        "tile_size": 550
+      },
+      "conquest-1": {
+        "image": "european_province_conquest-1_map.png",
+        "size": 2900,
+        "tile_size": 400
+      },
+      "conquest-2": {
+        "image": "european_province_conquest-2_map.png",
+        "size": 3300,
+        "tile_size": 450
+      },
+      "conquest-3": {
+        "image": "european_province_conquest-3_map.png",
+        "size": 2900,
+        "tile_size": 400
+      },
+      "domination-1": {
+        "image": "european_province_domination-1_map.png",
+        "size": 3300,
+        "tile_size": 450
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "fields_of_normandy",
+    "name": "Fields of Normandy",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "fields_of_normandy_battle-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "domination-1": {
+        "image": "fields_of_normandy_domination-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "fields_of_poland",
+    "name": "Fields of Poland",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "fields_of_poland_battle-1_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "conquest-1": {
+        "image": "fields_of_poland_conquest-1_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "conquest-2": {
+        "image": "fields_of_poland_conquest-2_map.png",
+        "size": 4000,
+        "tile_size": 550
+      },
+      "conquest-3": {
+        "image": "fields_of_poland_conquest-3_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "domination-1": {
+        "image": "fields_of_poland_domination-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "fields_of_poland_(winter)",
+    "name": "Fields of Poland (winter)",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "fields_of_poland_(winter)_battle-1_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "conquest-1": {
+        "image": "fields_of_poland_(winter)_conquest-1_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "conquest-2": {
+        "image": "fields_of_poland_(winter)_conquest-2_map.png",
+        "size": 4000,
+        "tile_size": 550
+      },
+      "conquest-3": {
+        "image": "fields_of_poland_(winter)_conquest-3_map.png",
+        "size": 3340,
+        "tile_size": 450
+      },
+      "domination-1": {
+        "image": "fields_of_poland_(winter)_domination-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Finland",
+    "name": "Finland",
+    "aliases": [
+      "finland"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "finland_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "finland_conquest-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "finland_conquest-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "finland_conquest-3_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "finland_domination-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "ff7f381010f8f8fc",
+      "fffe1808081f1f3f"
+    ]
+  },
+  {
+    "id": "fire_arc",
+    "name": "Fire Arc",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "fire_arc_battle-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "battle-2": {
+        "image": "fire_arc_battle-2_map.png",
+        "size": 3800,
+        "tile_size": 500
+      },
+      "conquest-1": {
+        "image": "fire_arc_conquest-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "fire_arc_conquest-2_map.png",
+        "size": 2350,
+        "tile_size": 325
+      },
+      "conquest-3": {
+        "image": "fire_arc_conquest-3_map.png",
+        "size": 2250,
+        "tile_size": 300
+      },
+      "domination-1": {
+        "image": "fire_arc_domination-1_map.png",
+        "size": 1450,
+        "tile_size": 200
+      },
+      "domination-2": {
+        "image": "fire_arc_domination-2_map.png",
+        "size": 3800,
+        "tile_size": 500
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "flanders",
+    "name": "Flanders",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "flanders_battle-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-1": {
+        "image": "flanders_conquest-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-2": {
+        "image": "flanders_conquest-2_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "conquest-3": {
+        "image": "flanders_conquest-3_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "domination-1": {
+        "image": "flanders_domination-1_map.png",
+        "size": 1800,
+        "tile_size": 250
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Foothills",
+    "name": "Foothills",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "000000010383cfdf"
+    ]
+  },
+  {
+    "id": "Frozen_Pass",
+    "name": "Frozen Pass",
+    "aliases": [
+      "frozen_pass"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "frozen_pass_battle-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-1": {
+        "image": "frozen_pass_conquest-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-2": {
+        "image": "frozen_pass_conquest-2_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "conquest-3": {
+        "image": "frozen_pass_conquest-3_map.png",
+        "size": 1050,
+        "tile_size": 150
+      },
+      "domination-1": {
+        "image": "frozen_pass_domination-1_map.png",
+        "size": 1050,
+        "tile_size": 150
+      }
+    },
+    "hashes": [
+      "000820e066cf9fff"
+    ]
+  },
+  {
+    "id": "Fulda",
+    "name": "Fulda",
+    "aliases": [
+      "fulda"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "fulda_battle-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "battle-2": {
+        "image": "fulda_battle-2_map.png",
+        "size": 4000,
+        "tile_size": 550
+      },
+      "conquest-1": {
+        "image": "fulda_conquest-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "conquest-2": {
+        "image": "fulda_conquest-2_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "conquest-3": {
+        "image": "fulda_conquest-3_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "domination-1": {
+        "image": "fulda_domination-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "domination-2": {
+        "image": "fulda_domination-2_map.png",
+        "size": 4000,
+        "tile_size": 550
+      }
+    },
+    "hashes": [
+      "083c1e7c7870f0c0"
+    ]
+  },
+  {
+    "id": "GoldenQuarry",
+    "name": "Golden Quarry",
+    "aliases": [
+      "golden_quarry"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "golden_quarry_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 2250
+      },
+      "battle-2": {
+        "image": "golden_quarry_battle-2_map.png",
+        "size": 2200,
+        "tile_size": 300
+      },
+      "conquest-1": {
+        "image": "golden_quarry_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "golden_quarry_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "golden_quarry_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "golden_quarry_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-2": {
+        "image": "golden_quarry_domination-2_map.png",
+        "size": 2200,
+        "tile_size": 300
+      }
+    },
+    "hashes": [
+      "f0e2c301181df167"
+    ]
+  },
+  {
+    "id": "Gorge",
+    "name": "Gorge",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "ffc300000000e3ff"
+    ]
+  },
+  {
+    "id": "ground_zero",
+    "name": "Ground Zero",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "ground_zero_battle-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "ground_zero_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "ground_zero_conquest-2_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "ground_zero_conquest-3_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "ground_zero_domination-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Guadalcanal",
+    "name": "Guadalcanal",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "080c2700c0f0ff7f"
+    ]
+  },
+  {
+    "id": "Honolulu",
+    "name": "Honolulu",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "70f8f8fe6f6f0200"
+    ]
+  },
+  {
+    "id": "IberianCastle",
+    "name": "Iberian Castle",
+    "aliases": [
+      "iberian_castle"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "iberian_castle_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "iberian_castle_conquest-1_map.png",
+        "size": 1150,
+        "tile_size": 160
+      },
+      "conquest-2": {
+        "image": "iberian_castle_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "iberian_castle_conquest-3_map.png",
+        "size": 1250,
+        "tile_size": 170
+      },
+      "domination-1": {
+        "image": "iberian_castle_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "fffffffefcf80000"
+    ]
+  },
+  {
+    "id": "Italy",
+    "name": "Italy",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "00007e7e7e7e3c00"
+    ]
+  },
+  {
+    "id": "Iwo_Jima",
+    "name": "Iwo Jima",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "07c3181c18e0e370"
+    ]
+  },
+  {
+    "id": "Japan",
+    "name": "Japan",
+    "aliases": [
+      "japan"
+    ],
+    "variants": {
+      "conquest-1": {
+        "image": "japan_conquest-1_map.png",
+        "size": 1225,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "japan_conquest-2_map.png",
+        "size": 1225,
+        "tile_size": 170
+      },
+      "conquest-3": {
+        "image": "japan_conquest-3_map.png",
+        "size": 1225,
+        "tile_size": 170
+      },
+      "domination-1": {
+        "image": "japan_domination-1_map.png",
+        "size": 1225,
+        "tile_size": 170
+      }
+    },
+    "hashes": [
+      "e0e0c0c0c0cfffff"
+    ]
+  },
+  {
+    "id": "Jungle",
+    "name": "Jungle",
+    "aliases": [
+      "jungle"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "jungle_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "jungle_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "jungle_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "jungle_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "jungle_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "8080e0f4feffedff"
+    ]
+  },
+  {
+    "id": "Karelia",
+    "name": "Karelia",
+    "aliases": [
+      "karelia"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "karelia_battle-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-1": {
+        "image": "karelia_conquest-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "karelia_conquest-2_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-3": {
+        "image": "karelia_conquest-3_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "domination-1": {
+        "image": "karelia_domination-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      }
+    },
+    "hashes": [
+      "fcbcfef8f87cfce0"
+    ]
+  },
+  {
+    "id": "Khalkhin_Gol",
+    "name": "Khalkhin Gol",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "0781814169e7f0fb"
+    ]
+  },
+  {
+    "id": "Korea",
+    "name": "Korea",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "00c00cb88cbcfcff"
+    ]
+  },
+  {
+    "id": "Kuban",
+    "name": "Kuban",
+    "aliases": [
+      "kuban"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "kuban_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "kuban_conquest-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "kuban_conquest-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "kuban_conquest-3_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "kuban_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": [
+      "b070e0e0c0c1cf9f"
+    ]
+  },
+  {
+    "id": "Kursk",
+    "name": "Kursk",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "0707937f153ccc5d"
+    ]
+  },
+  {
+    "id": "Maginot_Line",
+    "name": "Maginot Line",
+    "aliases": [
+      "maginot_line"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "maginot_line_battle-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "battle-2": {
+        "image": "maginot_line_battle-2_map.png",
+        "size": 3000,
+        "tile_size": 400
+      },
+      "conquest-1": {
+        "image": "maginot_line_conquest-1_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "conquest-2": {
+        "image": "maginot_line_conquest-2_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "conquest-3": {
+        "image": "maginot_line_conquest-3_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "domination-1": {
+        "image": "maginot_line_domination-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "domination-2": {
+        "image": "maginot_line_domination-2_map.png",
+        "size": 3000,
+        "tile_size": 400
+      }
+    },
+    "hashes": [
+      "ef0f1f1f0f050a00"
+    ]
+  },
+  {
+    "id": "maginot_line_(winter)",
+    "name": "Maginot Line (winter)",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "maginot_line_(winter)_battle-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "battle-2": {
+        "image": "maginot_line_(winter)_battle-2_map.png",
+        "size": 3000,
+        "tile_size": 400
+      },
+      "conquest-1": {
+        "image": "maginot_line_(winter)_conquest-1_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "conquest-2": {
+        "image": "maginot_line_(winter)_conquest-2_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "conquest-3": {
+        "image": "maginot_line_(winter)_conquest-3_map.png",
+        "size": 3400,
+        "tile_size": 450
+      },
+      "domination-1": {
+        "image": "maginot_line_(winter)_domination-1_map.png",
+        "size": 1900,
+        "tile_size": 250
+      },
+      "domination-2": {
+        "image": "maginot_line_(winter)_domination-2_map.png",
+        "size": 3000,
+        "tile_size": 400
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Malta",
+    "name": "Malta",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "182070381e1e0000"
+    ]
+  },
+  {
+    "id": "MiddleEast",
+    "name": "Middle East",
+    "aliases": [
+      "middle_east"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "middle_east_battle-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-1": {
+        "image": "middle_east_conquest-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-2": {
+        "image": "middle_east_conquest-2_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-3": {
+        "image": "middle_east_conquest-3_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "domination-1": {
+        "image": "middle_east_domination-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      }
+    },
+    "hashes": [
+      "3f7fbfff7e1c0080",
+      "fcfefdff7e380001"
+    ]
+  },
+  {
+    "id": "Mozdoc",
+    "name": "Mozdoc",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "7d0d0c31b3030301"
+    ]
+  },
+  {
+    "id": "mozdok",
+    "name": "Mozdok",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "mozdok_battle-1_map.png",
+        "size": 2000,
+        "tile_size": 275
+      },
+      "conquest-1": {
+        "image": "mozdok_conquest-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "mozdok_conquest-2_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "mozdok_conquest-3_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-4": {
+        "image": "mozdok_conquest-4_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "mozdok_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 275
+      },
+      "domination-2": {
+        "image": "mozdok_domination-2_map.png",
+        "size": 2300,
+        "tile_size": 325
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "New_Guinea",
+    "name": "New Guinea",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "0f0f0f6737030301"
+    ]
+  },
+  {
+    "id": "Normandy",
+    "name": "Normandy",
+    "aliases": [
+      "normandy"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "normandy_battle-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "normandy_conquest-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "normandy_conquest-2_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "normandy_conquest-3_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "normandy_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "ff0340ffffff2000"
+    ]
+  },
+  {
+    "id": "north_holland",
+    "name": "North Holland",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "north_holland_battle-1_map.png",
+        "size": 1750,
+        "tile_size": 250
+      },
+      "conquest-1": {
+        "image": "north_holland_conquest-1_map.png",
+        "size": 1375,
+        "tile_size": 190
+      },
+      "conquest-2": {
+        "image": "north_holland_conquest-2_map.png",
+        "size": 1375,
+        "tile_size": 190
+      },
+      "conquest-3": {
+        "image": "north_holland_conquest-3_map.png",
+        "size": 1750,
+        "tile_size": 250
+      },
+      "domination-1": {
+        "image": "north_holland_domination-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-2": {
+        "image": "north_holland_domination-2_map.png",
+        "size": 1750,
+        "tile_size": 250
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Peleliu",
+    "name": "Peleliu",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "0b0f0e1c18182000"
+    ]
+  },
+  {
+    "id": "Poland",
+    "name": "Poland",
+    "aliases": [
+      "poland"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "poland_battle-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-1": {
+        "image": "poland_conquest-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-2": {
+        "image": "poland_conquest-2_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-3": {
+        "image": "poland_conquest-3_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "domination-1": {
+        "image": "poland_domination-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      }
+    },
+    "hashes": [
+      "f0f0f0a2030f1f0f"
+    ]
+  },
+  {
+    "id": "poland_(winter)",
+    "name": "Poland (winter)",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "poland_(winter)_battle-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-1": {
+        "image": "poland_(winter)_conquest-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-2": {
+        "image": "poland_(winter)_conquest-2_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "conquest-3": {
+        "image": "poland_(winter)_conquest-3_map.png",
+        "size": 2700,
+        "tile_size": 350
+      },
+      "domination-1": {
+        "image": "poland_(winter)_domination-1_map.png",
+        "size": 2700,
+        "tile_size": 350
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Polygon",
+    "name": "Polygon",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "7f36c3d9d9430100"
+    ]
+  },
+  {
+    "id": "Port_Novorossiysk",
+    "name": "Port Novorossiysk",
+    "aliases": [
+      "port_novorossiysk"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "port_novorossiysk_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "battle-2": {
+        "image": "port_novorossiysk_battle-2_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-1": {
+        "image": "port_novorossiysk_conquest-1_map.png",
+        "size": 1200,
+        "tile_size": 170
+      },
+      "conquest-2": {
+        "image": "port_novorossiysk_conquest-2_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-3": {
+        "image": "port_novorossiysk_conquest-3_map.png",
+        "size": 1225,
+        "tile_size": 170
+      }
+    },
+    "hashes": [
+      "fff3f8f0c0c0f0f8"
+    ]
+  },
+  {
+    "id": "pradesh",
+    "name": "Pradesh",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "pradesh_battle-1_map.png",
+        "size": 3050,
+        "tile_size": 400
+      },
+      "domination-1": {
+        "image": "pradesh_domination-1_map.png",
+        "size": 3050,
+        "tile_size": 400
+      },
+      "domination-2": {
+        "image": "pradesh_domination-2_map.png",
+        "size": 3050,
+        "tile_size": 400
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "red_desert",
+    "name": "Red Desert",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "red_desert_battle-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "conquest-1": {
+        "image": "red_desert_conquest-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "conquest-2": {
+        "image": "red_desert_conquest-2_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "conquest-3": {
+        "image": "red_desert_conquest-3_map.png",
+        "size": 3600,
+        "tile_size": 500
+      },
+      "domination-1": {
+        "image": "red_desert_domination-1_map.png",
+        "size": 3600,
+        "tile_size": 500
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Ruhr",
+    "name": "Ruhr",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "080503071f1f0f8f"
+    ]
+  },
+  {
+    "id": "sands_of_sinai",
+    "name": "Sands of Sinai",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "sands_of_sinai_battle-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-1": {
+        "image": "sands_of_sinai_conquest-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-2": {
+        "image": "sands_of_sinai_conquest-2_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-3": {
+        "image": "sands_of_sinai_conquest-3_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "domination-1": {
+        "image": "sands_of_sinai_domination-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Second_Battle_of_El_Alamein",
+    "name": "Second Battle of El Alamein",
+    "aliases": [
+      "second_battle_of_el_alamein"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "second_battle_of_el_alamein_battle-1_map.png",
+        "size": 1300,
+        "tile_size": 180
+      },
+      "conquest-1": {
+        "image": "second_battle_of_el_alamein_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "second_battle_of_el_alamein_conquest-2_map.png",
+        "size": 2150,
+        "tile_size": 300
+      },
+      "conquest-3": {
+        "image": "second_battle_of_el_alamein_conquest-3_map.png",
+        "size": 1800,
+        "tile_size": 250
+      },
+      "domination-1": {
+        "image": "second_battle_of_el_alamein_domination-1_map.png",
+        "size": 2150,
+        "tile_size": 300
+      },
+      "domination-2": {
+        "image": "second_battle_of_el_alamein_domination-2_map.png",
+        "size": 1800,
+        "tile_size": 250
+      }
+    },
+    "hashes": [
+      "000000c0f0ffffff"
+    ]
+  },
+  {
+    "id": "seversk-13",
+    "name": "Seversk-13",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "seversk-13_battle-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "seversk-13_conquest-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "seversk-13_conquest-2_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "seversk-13_conquest-3_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "seversk-13_domination-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "seversk-13_(winter)",
+    "name": "Seversk-13 (winter)",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "seversk-13_(winter)_battle-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "seversk-13_(winter)_conquest-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "seversk-13_(winter)_conquest-2_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "seversk-13_(winter)_conquest-3_map.png",
+        "size": 1650,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "seversk-13_(winter)_domination-1_map.png",
+        "size": 1650,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Sicily",
+    "name": "Sicily",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "fcf8f0e0fcfcfcfe"
+    ]
+  },
+  {
+    "id": "Sinai",
+    "name": "Sinai",
+    "aliases": [
+      "sinai"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "sinai_battle-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "sinai_conquest-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "sinai_conquest-2_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "sinai_conquest-3_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "sinai_domination-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "f8f8fcf0f8f8fcfc",
+      "f8f8f8f0f8f8fcfc"
+    ]
+  },
+  {
+    "id": "Smolensk",
+    "name": "Smolensk",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "1f1f1c09117fe343"
+    ]
+  },
+  {
+    "id": "spaceport",
+    "name": "Spaceport",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "spaceport_battle-1_map.png",
+        "size": 2200,
+        "tile_size": 300
+      },
+      "conquest-1": {
+        "image": "spaceport_conquest-1_map.png",
+        "size": 2200,
+        "tile_size": 300
+      },
+      "conquest-2": {
+        "image": "spaceport_conquest-2_map.png",
+        "size": 2200,
+        "tile_size": 300
+      },
+      "conquest-3": {
+        "image": "spaceport_conquest-3_map.png",
+        "size": 2200,
+        "tile_size": 300
+      },
+      "domination-1": {
+        "image": "spaceport_domination-1_map.png",
+        "size": 2200,
+        "tile_size": 300
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Spain",
+    "name": "Spain",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "e7efbfb6f0f0f0e0"
+    ]
+  },
+  {
+    "id": "Stalingrad",
+    "name": "Stalingrad",
+    "aliases": [
+      "stalingrad"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "stalingrad_battle-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "stalingrad_conquest-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "stalingrad_conquest-2_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "stalingrad_conquest-3_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "stalingrad_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "3f807efcfefcf0f1"
+    ]
+  },
+  {
+    "id": "sun_city",
+    "name": "Sun City",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "sun_city_battle-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-1": {
+        "image": "sun_city_conquest-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "sun_city_conquest-2_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "sun_city_conquest-3_map.png",
+        "size": 1700,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "sun_city_domination-1_map.png",
+        "size": 1700,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "surroundings_of_volokolamsk",
+    "name": "Surroundings of Volokolamsk",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "surroundings_of_volokolamsk_battle-1_map.png",
+        "size": 3325,
+        "tile_size": 450
+      },
+      "domination-1": {
+        "image": "surroundings_of_volokolamsk_domination-1_map.png",
+        "size": 3800,
+        "tile_size": 500
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "sweden",
+    "name": "Sweden",
+    "aliases": [],
+    "variants": {
+      "battle-1": {
+        "image": "sweden_battle-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "sweden_conquest-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "sweden_conquest-2_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "sweden_conquest-3_map.png",
+        "size": 1500,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "sweden_domination-1_map.png",
+        "size": 1500,
+        "tile_size": 200
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "test-site_2271",
+    "name": "Test-site 2271",
+    "aliases": [],
+    "variants": {
+      "domination-1": {
+        "image": "test-site_2271_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      }
+    },
+    "hashes": []
+  },
+  {
+    "id": "Tunisia",
+    "name": "Tunisia",
+    "aliases": [
+      "tunisia"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "tunisia_battle-1_map.png",
+        "size": 2000,
+        "tile_size": 275
+      },
+      "battle-2": {
+        "image": "tunisia_battle-2_map.png",
+        "size": 3300,
+        "tile_size": 450
+      },
+      "conquest-1": {
+        "image": "tunisia_conquest-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-2": {
+        "image": "tunisia_conquest-2_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "conquest-3": {
+        "image": "tunisia_conquest-3_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-1": {
+        "image": "tunisia_domination-1_map.png",
+        "size": 1600,
+        "tile_size": 225
+      },
+      "domination-2": {
+        "image": "tunisia_domination-2_map.png",
+        "size": 3300,
+        "tile_size": 450
+      }
+    },
+    "hashes": [
+      "fefefe00c0fefefe"
+    ]
+  },
+  {
+    "id": "Vietnam",
+    "name": "Vietnam",
+    "aliases": [
+      "vietnam"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "vietnam_battle-1_map.png",
+        "size": 1900,
+        "tile_size": 350
+      },
+      "battle-2": {
+        "image": "vietnam_battle-2_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-1": {
+        "image": "vietnam_conquest-1_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-2": {
+        "image": "vietnam_conquest-2_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "conquest-3": {
+        "image": "vietnam_conquest-3_map.png",
+        "size": 2400,
+        "tile_size": 325
+      },
+      "domination-1": {
+        "image": "vietnam_domination-1_map.png",
+        "size": 1900,
+        "tile_size": 350
+      },
+      "domination-2": {
+        "image": "vietnam_domination-2_map.png",
+        "size": 2400,
+        "tile_size": 325
+      }
+    },
+    "hashes": [
+      "013e3c7cfefe7c08"
+    ]
+  },
+  {
+    "id": "Volokolamsk",
+    "name": "Volokolamsk",
+    "aliases": [
+      "volokolamsk"
+    ],
+    "variants": {
+      "battle-1": {
+        "image": "volokolamsk_battle-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-1": {
+        "image": "volokolamsk_conquest-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-2": {
+        "image": "volokolamsk_conquest-2_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "conquest-3": {
+        "image": "volokolamsk_conquest-3_map.png",
+        "size": 1400,
+        "tile_size": 200
+      },
+      "domination-1": {
+        "image": "volokolamsk_domination-1_map.png",
+        "size": 1400,
+        "tile_size": 200
+      }
+    },
+    "hashes": [
+      "f7e54d49e8d8fc3e"
+    ]
+  },
+  {
+    "id": "Wake_Island",
+    "name": "Wake Island",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "fffff9f8d8c0c000",
+      "f7fef9f8d8c08000",
+      "f7fff9f8d8c08000"
+    ]
+  },
+  {
+    "id": "White_Rock_Fortress",
+    "name": "White Rock Fortress",
+    "aliases": [],
+    "variants": {},
+    "hashes": [
+      "8fc68480e6b6acc7"
+    ]
+  }
+]

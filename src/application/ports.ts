@@ -1,3 +1,4 @@
+import type {BattleModeVariant} from '../domain/battle-mode.ts';
 import type {BattleMap, BattleObject, MapInfo} from '../domain/battle.ts';
 import type {TacticalPosition} from '../domain/position.ts';
 
@@ -92,3 +93,7 @@ export interface TelemetryGateway {
 }
 
 export type MapImageUrl = (info: MapInfo) => string;
+
+export interface BattleModeCatalog {
+    variants(mapId: string | null): readonly BattleModeVariant[];
+}

@@ -3,6 +3,7 @@ import type {MapGeometry, Point} from '../domain/geometry.ts';
 import type {TacticalPosition} from '../domain/position.ts';
 import type {MapViewState} from '../application/map-controller.ts';
 import {Camera} from './camera.ts';
+import {mapGrid, gridRowLabel} from '../domain/map-grid.ts';
 import {MarkerRenderer} from './marker-renderer.ts';
 import type {AirGroundGuidance} from '../domain/air-ground-guidance.ts';
 import {isAircraftClass} from '../domain/air-ground-guidance.ts';
@@ -23,6 +24,7 @@ export class CanvasRenderer {
     private readonly markers = new MarkerRenderer();
     private readonly guidanceRenderer = new AirGroundGuidanceRenderer();
     private guidance: AirGroundGuidance | null = null;
+    private showPreparationRoutes = true;
     private width = 1;
     private height = 1;
     private pixelRatio = 1;
@@ -46,6 +48,8 @@ export class CanvasRenderer {
 
     resetPlayer(): void { this.lastPlayer = null; }
 
+    setShowPreparationRoutes(enabled: boolean): void { this.showPreparationRoutes = enabled; }
+
     setMarkerSize(size: number): void { this.markers.setSize(size); }
 
     setAirGroundGuidance(guidance: AirGroundGuidance | null): void { this.guidance = guidance; }
@@ -66,7 +70,13 @@ export class CanvasRenderer {
         if (this.guidance && this.lastPlayer) {
             this.guidanceRenderer.draw(ctx, this.camera, this.guidance, this.lastPlayer.position, this.width, this.height);
         }
-        const selected = (overlay?.positions ?? state.positions).find(position => position.id === overlay?.selectedId);
+        const positions = overlay?.positions ?? state.positions;
+        const selected = positions.find(position => position.id === overlay?.selectedId);
+        if (this.showPreparationRoutes && state.image && state.connection === 'connected' && state.objectsReady && !state.battleStarted) {
+            for (const position of positions) {
+                if (position.id !== selected?.id && position.approachPath) drawPositionRoute(ctx, this.camera, position.approachPath, false, true);
+            }
+        }
         if (selected?.approachPath) drawPositionRoute(ctx, this.camera, selected.approachPath, false);
         if (overlay?.draft?.approachPath) drawPositionRoute(ctx, this.camera, overlay.draft.approachPath, true);
         for (const object of state.objects) {
@@ -88,45 +98,66 @@ export class CanvasRenderer {
     }
 
     private drawGrid(geometry: MapGeometry): void {
-        const {min, max, gridStep} = geometry;
+        const grid = mapGrid(geometry);
+        if (!grid) return;
         const topLeft = this.camera.screenToMap({x: 0, y: 0});
         const bottomRight = this.camera.screenToMap({x: this.width, y: this.height});
+        const min = {x: Math.max(0, grid.origin.x, topLeft.x), y: Math.max(0, grid.origin.y, topLeft.y)};
+        const max = {
+            x: Math.min(1, grid.origin.x + grid.size.x, bottomRight.x),
+            y: Math.min(1, grid.origin.y + grid.size.y, bottomRight.y)
+        };
+        if (max.x <= min.x || max.y <= min.y) return;
+        const start = this.camera.mapToScreen(min);
+        const end = this.camera.mapToScreen(max);
         const ctx = this.context;
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(start.x, start.y, end.x - start.x, end.y - start.y);
+        ctx.clip();
         ctx.lineWidth = 1;
         ctx.strokeStyle = '#555';
         ctx.fillStyle = '#111';
         ctx.font = '12px sans-serif';
         const drawAxis = (axis: 'x' | 'y'): void => {
-            const span = max[axis] - min[axis];
-            const start = Math.max(0, Math.floor(topLeft[axis] * span / gridStep[axis]));
-            const end = Math.min(Math.ceil(bottomRight[axis] * span / gridStep[axis]), Math.ceil(span / gridStep[axis]));
+            const origin = grid.origin[axis];
+            const step = grid.step[axis];
+            const count = axis === 'x' ? grid.columns : grid.rows;
+            const first = Math.max(0, Math.floor((min[axis] - origin) / step));
+            const last = Math.min(count - 1, Math.floor((max[axis] - origin) / step));
             ctx.beginPath();
-            // Invalid/extreme grids must not lock up the browser.
-            for (let index = start; index <= end && index - start < 512; index++) {
-                const normalized = index * gridStep[axis] / span;
-                const screen = this.camera.mapToScreen({x: normalized, y: normalized});
+            // Only visit visible cells, with a cap for pathological telemetry.
+            for (let index = first; index <= last && index - first < 512; index++) {
+                const boundary = origin + index * step;
+                const screen = this.camera.mapToScreen({x: boundary, y: boundary});
                 if (axis === 'x') {
-                    ctx.moveTo(Math.floor(screen.x) + 0.5, 0);
-                    ctx.lineTo(Math.floor(screen.x) + 0.5, this.height);
+                    ctx.moveTo(Math.floor(screen.x) + 0.5, start.y);
+                    ctx.lineTo(Math.floor(screen.x) + 0.5, end.y);
                 } else {
-                    ctx.moveTo(0, Math.floor(screen.y) + 0.5);
-                    ctx.lineTo(this.width, Math.floor(screen.y) + 0.5);
+                    ctx.moveTo(start.x, Math.floor(screen.y) + 0.5);
+                    ctx.lineTo(end.x, Math.floor(screen.y) + 0.5);
                 }
-                const center = this.camera.mapToScreen({x: normalized + gridStep.x / span / 2, y: normalized + gridStep.y / span / 2});
+                const cellEnd = Math.min(boundary + step, origin + grid.size[axis]);
+                const middle = (boundary + cellEnd) / 2;
+                const center = this.camera.mapToScreen({x: middle, y: middle});
                 if (axis === 'x') {
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'top';
-                    ctx.fillText(String(index + 1), center.x, 3);
-                } else if (index < 26) {
+                    ctx.fillText(String(index + 1), center.x, start.y + 3);
+                } else {
                     ctx.textAlign = 'left';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(String.fromCharCode(65 + index), 3, center.y);
+                    ctx.fillText(gridRowLabel(index), start.x + 3, center.y);
                 }
             }
             ctx.stroke();
         };
         drawAxis('x');
         drawAxis('y');
+        const gridStart = this.camera.mapToScreen(grid.origin);
+        const gridEnd = this.camera.mapToScreen({x: grid.origin.x + grid.size.x, y: grid.origin.y + grid.size.y});
+        ctx.strokeRect(gridStart.x, gridStart.y, gridEnd.x - gridStart.x, gridEnd.y - gridStart.y);
+        ctx.restore();
     }
 
     private color(object: BattleObject, time: number): string {

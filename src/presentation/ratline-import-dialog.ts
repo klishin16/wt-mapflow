@@ -26,12 +26,12 @@ export class RatlineImportDialog {
             <label>Источник JSON<select data-source><option value="text">Вставить текст</option><option value="file">Выбрать файл</option></select></label>
             <label data-text-field>JSON карты<textarea data-text rows="8" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder='{"mapName":"Tunisia","pins":[],"routes":[]}'></textarea></label>
             <label data-file-field hidden>Файл карты<input data-file type="file" accept="application/json,.json"></label>
-            <label><input data-bind type="checkbox" checked> Привязать к текущей игровой карте и её варианту</label>
+            <label class="switch-control"><input data-bind type="checkbox" role="switch" checked> Привязать к текущей игровой карте и её варианту</label>
             <p data-context class="help"></p>
             <details><summary>Настройки координат</summary>
                 <label>Единицы<select data-units><option value="auto">Автоматически</option><option value="normalized">От 0 до 1</option><option value="pixels">Пиксели</option></select></label>
                 <label>Порядок пар<select data-order><option value="xy">X, Y</option><option value="yx">Y, X</option></select></label>
-                <label><input data-flip type="checkbox" checked> Поменять верх и низ (перевернуть ось Y)</label>
+                <label class="switch-control"><input data-flip type="checkbox" role="switch" checked> Поменять верх и низ (перевернуть ось Y)</label>
                 <label>Поле пути (необязательно)<input data-field placeholder="Для segments[].points определяется автоматически"></label>
                 <label>Ширина исходной карты, px<input data-width type="number" min="1" placeholder="Из imageUrl"></label>
                 <label>Высота исходной карты, px<input data-height type="number" min="1" placeholder="Из imageUrl"></label>

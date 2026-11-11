@@ -1,4 +1,5 @@
 import {defineConfig} from 'vite';
+import {fileURLToPath} from 'node:url';
 
 const proxy = {
     '/telemetry': {
@@ -8,4 +9,10 @@ const proxy = {
     }
 };
 
-export default defineConfig({server: {proxy}, preview: {proxy}});
+export default defineConfig({
+    server: {proxy}, preview: {proxy},
+    build: {rolldownOptions: {input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        admin: fileURLToPath(new URL('./admin.html', import.meta.url))
+    }}}
+});

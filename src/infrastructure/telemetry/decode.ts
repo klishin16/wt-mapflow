@@ -14,10 +14,19 @@ export function decodeMap(value: unknown): BattleMap {
     const min = point(value.map_min);
     const max = point(value.map_max);
     const gridStep = point(value.grid_steps);
+    const gridOrigin = point(value.grid_zero);
+    const gridSize = point(value.grid_size);
     const geometry: MapInfo['geometry'] = min && max && gridStep &&
         max.x > min.x && max.y > min.y && gridStep.x > 0 && gridStep.y > 0
-        ? {min, max, gridStep} : null;
-    return {kind: 'active', info: {generation: value.map_generation, geometry}};
+        ? {
+            min, max, gridStep,
+            ...(gridOrigin ? {gridOrigin} : {}),
+            ...(gridSize && gridSize.x > 0 && gridSize.y > 0 ? {gridSize} : {})
+        } : null;
+    return {kind: 'active', info: {
+        generation: value.map_generation, geometry,
+        ...(finiteNumber(value.hud_type) ? {hudType: value.hud_type} : {})
+    }};
 }
 
 function rgb(value: unknown): Rgb | undefined {
@@ -64,6 +73,18 @@ function spawnType(value: unknown): SpawnType | undefined {
     }
 }
 
+function captureLabel(item: Record<string, unknown>): string | undefined {
+    if (item.icon !== 'capture_zone' && item.type !== 'capture_zone') return undefined;
+    const label = typeof item.zone_label === 'string' ? item.zone_label.trim() : '';
+    if (/^[\p{L}\p{N}]{1,4}$/u.test(label)) return label;
+    const code = item.zone_label_code;
+    if (finiteNumber(code) && Number.isInteger(code) && code >= 0 && code <= 0x10ffff) {
+        const character = String.fromCodePoint(code);
+        if (/^[\p{L}\p{N}]$/u.test(character)) return character;
+    }
+    return undefined;
+}
+
 export function decodeObjects(value: unknown): readonly BattleObject[] {
     if (!Array.isArray(value)) throw new Error('Некорректные данные объектов');
     return value.flatMap((item: unknown): BattleObject[] => {
@@ -79,10 +100,12 @@ export function decodeObjects(value: unknown): readonly BattleObject[] {
             return [{kind: 'airfield', start: {x: item.sx, y: item.sy}, end: {x: item.ex, y: item.ey}, ...style}];
         }
         if (!finiteNumber(item.x) || !finiteNumber(item.y) || typeof item.icon !== 'string') return [];
+        const label = captureLabel(item);
         return [{
             kind: 'point', position: {x: item.x, y: item.y}, icon: item.icon,
             vehicleClass: vehicleClass(item.icon) ?? vehicleClass(item.icon_bg) ?? vehicleClass(item.type),
             spawnType: spawnType(item.type) ?? spawnType(item.icon),
+            ...(label ? {captureLabel: label} : {}),
             direction: {x: finiteNumber(item.dx) ? item.dx : 0, y: finiteNumber(item.dy) ? item.dy : -1},
             rotates: item.type === 'respawn_base_fighter' || item.type === 'respawn_base_bomber',
             ...style

@@ -5,6 +5,7 @@ import {PositionProximity} from '../application/position-proximity.ts';
 import type {Point} from '../domain/geometry.ts';
 import type {PositionDraft, TacticalPosition} from '../domain/position.ts';
 import {appliesToSpawn, approachPathLength, mapDistanceMeters} from '../domain/position.ts';
+import {mapGridLabel} from '../domain/map-grid.ts';
 import {isSameMap, mapVariantId} from '../domain/map-identity.ts';
 import {button, element} from './dom.ts';
 import {MapView} from './map-view.ts';
@@ -146,11 +147,7 @@ export class PositionWorkspace {
         return (this.state?.objects ?? []).flatMap(object => {
             if (object.kind !== 'point' || object.spawnType !== 'tank') return [];
             let location = `${Math.round(object.position.x * 100)}%, ${Math.round(object.position.y * 100)}%`;
-            if (geometry) {
-                const row = Math.floor(object.position.y * (geometry.max.y - geometry.min.y) / geometry.gridStep.y);
-                const column = Math.floor(object.position.x * (geometry.max.x - geometry.min.x) / geometry.gridStep.x) + 1;
-                if (row >= 0 && row < 26) location = `${String.fromCharCode(65 + row)}${column}`;
-            }
+            if (geometry) location = mapGridLabel(object.position, geometry) ?? location;
             return [{label: `Спавн · ${location}`, point: object.position}];
         });
     }

@@ -1,25 +1,14 @@
 import {ahash} from './ahash/ahash.ts';
-import {maps} from './catalog.ts';
+import type {MapCatalogRepository} from '../../application/map-catalog.ts';
 import type {MapHashSample, MapRecognition} from '../../domain/map-recognition.ts';
 import {recognizeMapHashes} from '../../domain/map-recognition.ts';
-import {isRecord} from '../records.ts';
-import {validMapName} from './map-name.ts';
-
-const bindingKey = 'wt-rat.map-bindings.v1';
-export const mapNames = [...new Set(Object.values(maps).flatMap(map => map ? [map.name] : []))].sort();
-const references = Object.entries(maps).flatMap(([hash, map]) => map ? [{hash, mapId: map.name}] : []);
 
 export class BrowserMapRecognizer {
     private readonly fingerprints = new WeakMap<HTMLImageElement, Promise<readonly MapHashSample[]>>();
-    private readonly bindings = new Map<string, string>();
+    private readonly catalog: MapCatalogRepository;
 
-    constructor() {
-        try {
-            const value: unknown = JSON.parse(localStorage.getItem(bindingKey) ?? '{}');
-            if (isRecord(value)) for (const [hash, name] of Object.entries(value)) {
-                if (/^[a-f0-9]{16}$/.test(hash) && typeof name === 'string' && validMapName(name)) this.bindings.set(hash, name);
-            }
-        } catch { /* Bindings still work for this session if storage is unavailable. */ }
+    constructor(catalog: MapCatalogRepository) {
+        this.catalog = catalog;
     }
 
     async recognize(image: HTMLImageElement): Promise<MapRecognition> {
@@ -32,15 +21,8 @@ export class BrowserMapRecognizer {
         const samples = await fingerprint;
         // Preserve custom-* IDs, so pre-existing personal positions remain accessible.
         const imageHash = samples[0].hash;
-        return recognizeMapHashes(imageHash, samples, references, this.bindings.get(imageHash));
-    }
-
-    bind(hash: string, mapId: string | null): boolean {
-        if (!/^[a-f0-9]{16}$/.test(hash) || (mapId !== null && !validMapName(mapId))) throw new Error('Некорректное название карты');
-        if (mapId === null) this.bindings.delete(hash);
-        else this.bindings.set(hash, mapId);
-        try { localStorage.setItem(bindingKey, JSON.stringify(Object.fromEntries(this.bindings))); return true; }
-        catch { return false; }
+        const references = this.catalog.list().flatMap(map => map.hashes.map(hash => ({hash, mapId: map.id})));
+        return recognizeMapHashes(imageHash, samples, references, references.find(reference => reference.hash === imageHash)?.mapId);
     }
 
     private async hashes(image: HTMLImageElement): Promise<readonly MapHashSample[]> {

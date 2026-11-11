@@ -1,6 +1,33 @@
 const guidanceKey = 'wt-rat.enemy-tank-spawn-guidance';
 
 export class BrowserMapSettings {
+    adaptiveAircraftZoom(): boolean {
+        try { return localStorage.getItem('wt-mapflow.adaptive-aircraft-zoom') !== 'false'; }
+        catch { return true; }
+    }
+
+    setAdaptiveAircraftZoom(enabled: boolean): void {
+        try { localStorage.setItem('wt-mapflow.adaptive-aircraft-zoom', String(enabled)); } catch { /* Session choice still applies. */ }
+    }
+
+    onlyOwnSpawnPositions(): boolean {
+        try { return localStorage.getItem('wt-mapflow.only-own-spawn-positions') !== 'false'; }
+        catch { return true; }
+    }
+
+    setOnlyOwnSpawnPositions(enabled: boolean): void {
+        try { localStorage.setItem('wt-mapflow.only-own-spawn-positions', String(enabled)); } catch { /* Session choice still applies. */ }
+    }
+
+    showPreparationRoutes(): boolean {
+        try { return localStorage.getItem('wt-mapflow.show-preparation-routes') !== 'false'; }
+        catch { return true; }
+    }
+
+    setShowPreparationRoutes(enabled: boolean): void {
+        try { localStorage.setItem('wt-mapflow.show-preparation-routes', String(enabled)); } catch { /* Session choice still applies. */ }
+    }
+
     showAirfieldAirDefence(): boolean {
         try { return localStorage.getItem('wt-rat.show-airfield-air-defence') === 'true'; }
         catch { return false; }

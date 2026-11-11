@@ -4,7 +4,7 @@ import {mapMatchMargin, mapMatchThreshold} from '../domain/map-recognition.ts';
 import {element} from './dom.ts';
 
 interface Options {
-    readonly names: readonly string[];
+    readonly maps: readonly {readonly id: string; readonly name: string}[];
     readonly onBind: (mapId: string | null) => Promise<boolean>;
 }
 
@@ -20,11 +20,11 @@ export class MapRecognitionPanel {
     private busy = false;
     private available = false;
     private signature = '';
+    private mapsSignature = '';
 
     constructor(options: Options) {
         this.options = options;
-        const names = element('map-name-options', HTMLDataListElement);
-        names.replaceChildren(...options.names.map(name => new Option(name, name)));
+        this.updateMaps();
         this.apply.addEventListener('click', () => { void this.bind(this.input.value.trim()); }, {signal: this.lifecycle.signal});
         this.automatic.addEventListener('click', () => { void this.bind(null); }, {signal: this.lifecycle.signal});
         this.input.addEventListener('keydown', event => {
@@ -33,6 +33,7 @@ export class MapRecognitionPanel {
     }
 
     setState(state: MapViewState<HTMLImageElement>, report: MapRecognition | null): void {
+        this.updateMaps();
         this.available = !!state.info && !!state.image && !!report;
         this.controls();
         if (!report) {
@@ -54,8 +55,16 @@ export class MapRecognitionPanel {
             `Порог: ${mapMatchThreshold} бита из 64; отрыв от другой карты: ≥ ${mapMatchMargin} бита.`,
             'Ближайшие карты (по лучшему варианту хеша):',
             ...report.candidates.map(candidate => `${candidate.mapId}: ${candidate.distance}/64 · ${candidate.format} · эталон ${candidate.reference}`),
-            'Каталог: исторические aHash + дополнительные варианты из PowerBroker2/WarThunder. Сверен 08.11.2026; актуальность всех эталонов в игре не подтверждена.'
+            'Распознавание использует хеши, сохранённые в общем хранилище карт при ручном определении.'
         ].join('\n');
+    }
+
+    private updateMaps(): void {
+        const signature = JSON.stringify(this.options.maps.map(map => [map.id, map.name]));
+        if (signature === this.mapsSignature) return;
+        this.mapsSignature = signature;
+        const names = element('map-name-options', HTMLDataListElement);
+        names.replaceChildren(...[...this.options.maps].sort((a, b) => a.name.localeCompare(b.name, 'en', {numeric: true})).map(map => new Option(map.name, map.id)));
     }
 
     private controls(): void {

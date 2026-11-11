@@ -112,51 +112,6 @@ body {
     font-variant-numeric: tabular-nums;
 }
 
-.spawn-guidance-toggle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 42px;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.spawn-guidance-toggle #enemy-spawn-guidance {
-    appearance: none;
-    -webkit-appearance: none;
-    position: relative;
-    box-sizing: border-box;
-    width: 36px;
-    height: 22px;
-    min-width: 36px;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #74818e;
-    border-radius: 20px;
-    background: #424c57;
-    cursor: pointer;
-}
-
-.spawn-guidance-toggle #enemy-spawn-guidance::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #e2edf7;
-}
-
-.spawn-guidance-toggle #enemy-spawn-guidance:checked {
-    background: #246481;
-    border-color: #8ad5ff;
-}
-
-.spawn-guidance-toggle #enemy-spawn-guidance:checked::before {
-    transform: translateX(14px);
-}
-
 #spawn-guidance-info { flex-basis: 100%; }
 
 #map-viewport {
@@ -363,3 +318,49 @@ input:not([type='range']):not([type='file']), select, textarea {
     .settings-panel { top: 58px; right: 8px; width: calc(100vw - 16px); max-height: calc(100dvh - 74px); padding: 14px; }
     #camera-mode { display: none; }
 }
+
+
+.switch-control, .ratline-dialog label.switch-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 42px;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+.switch-control input[type="checkbox"][role="switch"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 22px;
+    min-height: 0;
+    min-width: 36px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #74818e;
+    border-radius: 20px;
+    background: #424c57;
+    cursor: pointer;
+}
+.switch-control input[role="switch"]::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #e2edf7;
+}
+.switch-control input[type="checkbox"][role="switch"]:checked {
+    background: #246481;
+    border-color: #8ad5ff;
+}
+.switch-control input[role="switch"]:checked::before { transform: translateX(14px); }
+.switch-control input[role="switch"]:disabled { opacity: 0.45; cursor: default; }
+
+#player-side { padding: 4px 8px; border: 1px solid #536273; border-radius: 5px; color: #c9e5fb; font-size: 12px; }
